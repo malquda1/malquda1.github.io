@@ -325,7 +325,24 @@ img {
 
 .profile-sidebar {
   position: sticky;
-  top: 96px;
+  top: 88px;
+  max-height: calc(100vh - 108px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-hover) transparent;
+}
+
+.profile-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.profile-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.profile-sidebar::-webkit-scrollbar-thumb {
+  background: var(--border-hover);
+  border-radius: 999px;
 }
 
 .profile-card {
@@ -334,7 +351,7 @@ img {
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-subtle);
   border-radius: 20px;
-  padding: 28px 24px;
+  padding: 22px 20px;
   box-shadow: var(--shadow-card);
 }
 
@@ -347,12 +364,12 @@ img {
 
 .avatar-wrapper {
   position: relative;
-  width: 108px;
-  height: 108px;
-  border-radius: 24px;
+  width: 92px;
+  height: 92px;
+  border-radius: 22px;
   padding: 3px;
   background: var(--accent-gradient);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   box-shadow: 0 10px 25px -5px var(--accent-glow);
 }
 
@@ -428,11 +445,11 @@ img {
 
 /* Metrics Strip */
 .metrics-strip {
-  margin-top: 20px;
+  margin-top: 16px;
   background: var(--bg-subtle);
   border: 1px solid var(--border-subtle);
   border-radius: 14px;
-  padding: 12px 8px;
+  padding: 10px 8px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -489,14 +506,14 @@ img {
 .divider {
   height: 1px;
   background: var(--border-subtle);
-  margin: 20px 0;
+  margin: 14px 0;
 }
 
 /* Contact List */
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 11px;
 }
 
 .contact-item {
@@ -1300,6 +1317,8 @@ img {
 
   .profile-sidebar {
     position: static;
+    max-height: none;
+    overflow-y: visible;
   }
 
   .profile-top {

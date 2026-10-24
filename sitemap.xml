@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://malquda1.github.io/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://malquda1.github.io/assets/pdf/Enhancing_Weather-Related_Outage_Prediction_and_Precursor_Discovery_through_Attention-Based_Multi-Level_Modeling.pdf</loc>
+    <lastmod>2023-08-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://malquda1.github.io/assets/pdf/Automated_Power_System_Fault_Prediction_and_Precursor_Discovery_Using_Multi-Modal_Data.pdf</loc>
+    <lastmod>2022-12-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://malquda1.github.io/assets/pdf/ALQUDAH-IEEE-POWER-SYSTEMS.pdf</loc>
+    <lastmod>2022-07-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>

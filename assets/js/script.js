@@ -1,159 +1,96 @@
 'use strict';
 
-
-
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
-
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
-  });
-
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
-
-
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
-  });
-}
-
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
-const filterFunc = function (selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Dynamic Year in Footer
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
   }
 
-}
+  // 2. Theme Toggle (Dark / Light mode)
+  const themeToggle = document.getElementById('theme-toggle');
+  const htmlEl = document.documentElement;
+  const savedTheme = localStorage.getItem('malquda-theme') || 'dark';
+  htmlEl.setAttribute('data-theme', savedTheme);
 
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = htmlEl.getAttribute('data-theme') || 'dark';
+      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlEl.setAttribute('data-theme', nextTheme);
+      localStorage.setItem('malquda-theme', nextTheme);
+    });
+  }
 
-for (let i = 0; i < filterBtn.length; i++) {
+  // 3. Mobile Sidebar Toggle
+  const sidebar = document.querySelector('[data-sidebar]');
+  const sidebarBtn = document.querySelector('[data-sidebar-btn]');
 
-  filterBtn[i].addEventListener("click", function () {
+  if (sidebar && sidebarBtn) {
+    sidebarBtn.addEventListener('click', () => {
+      const isActive = sidebar.classList.toggle('active');
+      sidebarBtn.setAttribute('aria-expanded', String(isActive));
+    });
+  }
 
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
+  // 4. Page Navigation (About, Experience, Publications)
+  const navLinks = document.querySelectorAll('[data-nav-link]');
+  const pages = document.querySelectorAll('[data-page]');
+  const jumpButtons = document.querySelectorAll('[data-jump-page]');
+  const brandLink = document.querySelector('[data-nav-target]');
 
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
+  const switchPage = (targetPage) => {
+    pages.forEach((page) => {
+      const isMatch = page.dataset.page === targetPage;
+      page.classList.toggle('active', isMatch);
+    });
 
+    navLinks.forEach((link) => {
+      const isMatch = link.dataset.navLink === targetPage;
+      link.classList.toggle('active', isMatch);
+    });
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      switchPage(link.dataset.navLink);
+    });
   });
 
-}
-
-
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
+  jumpButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      switchPage(btn.dataset.jumpPage);
+    });
   });
-}
 
+  if (brandLink) {
+    brandLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchPage(brandLink.dataset.navTarget);
+    });
+  }
 
+  // 5. Publications Topic Filter
+  const filterPills = document.querySelectorAll('[data-pub-filter]');
+  const pubCards = document.querySelectorAll('[data-pub-category]');
 
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+  filterPills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const filterValue = pill.dataset.pubFilter;
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+      filterPills.forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
+      pubCards.forEach((card) => {
+        const categories = (card.dataset.pubCategory || '').split(' ');
+        if (filterValue === 'all' || categories.includes(filterValue)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
   });
-}
+});

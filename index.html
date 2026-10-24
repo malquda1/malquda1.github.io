@@ -1,1265 +1,1170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome!</title>
+  <title>Mohammad Alqudah, PhD — Principal Applied Scientist at Microsoft</title>
+  <meta name="description" content="Mohammad Alqudah, PhD — Principal Applied Scientist at Microsoft (Collab AI Research). AI, Large Language Models (LLMs), Human-Computer Interaction, Patents, and Spatiotemporal Machine Learning.">
+  <meta name="keywords" content="Mohammad Alqudah, Mohammad K. Alqudah, Principal Applied Scientist, Microsoft Research, Collab AI, Best Buy, Temple University, Machine Learning, LLMs, RAG, Spatiotemporal ML">
+  <meta name="author" content="Mohammad Alqudah, PhD">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://malquda1.github.io/">
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Mohammad Alqudah, PhD — Principal Applied Scientist">
+  <meta property="og:description" content="Principal Applied Scientist at Microsoft (Collab AI Research). Research and applied AI across LLMs, Human-Computer Interaction, and Multimodal Machine Learning.">
+  <meta property="og:url" content="https://malquda1.github.io/">
+  <meta property="og:image" content="https://malquda1.github.io/assets/images/logo.svg">
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mohammad Alqudah, PhD — Principal Applied Scientist">
+  <meta name="twitter:description" content="Principal Applied Scientist at Microsoft (Collab AI Research). AI, LLMs, HCI, and Machine Learning.">
 
-  <!--
-    - google font link
-  -->
+  <!-- Modern SVG Favicon -->
+  <link rel="icon" href="./assets/images/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/images/logo.svg">
+
+  <!-- Google Structured Data (JSON-LD) for Person & Scholarly Profile -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammad Alqudah",
+    "alternateName": "Mohammad K. Alqudah",
+    "honorificSuffix": "PhD",
+    "jobTitle": "Principal Applied Scientist",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Microsoft"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Temple University"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Binghamton University"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Jordan University of Science and Technology"
+      }
+    ],
+    "url": "https://malquda1.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/mohammadalqudah/",
+      "https://scholar.google.com/citations?hl=en&user=NmyJed4AAAAJ&view_op=list_works&sortby=pubdate",
+      "https://www.microsoft.com/en-us/research/people/mohammad-alqudah/",
+      "https://github.com/malquda1"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Inter, Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
+  <!-- Ambient Background Glow -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
 
-  <!--
-    - #MAIN
-  -->
+  <!-- Top Navigation Bar -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#about" class="brand" data-nav-target="about">
+        <span class="brand-dot"></span>
+        <span class="brand-name">Mohammad Alqudah<span class="brand-phd">, PhD</span></span>
+      </a>
 
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/mohammad-avatar.png" alt="Mohammad Alqudah" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Mohammad Alqudah">Mohammad <br> Alqudah</h1>
-
-          <p class="title">Applied ML Scientist</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:mohammad.al.qudah@hotmail.com" class="contact-link">mohammad.al.qudah@hotmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Seattle, Washington, USA</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <!-- <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li> -->
-
-          <li class="social-item">
-            <a href="https://www.instagram.com/mohammad_qudah/" target="_blank" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://scholar.google.com/citations?authuser=1&user=eDnw7fsAAAAJ" target="_blank" class="social-link">
-              <img src="./assets/images/icons8-google-scholar-48.png" width="20" height="20"></img>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
+      <nav class="navbar" aria-label="Primary Navigation">
         <ul class="navbar-list">
-
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link="about">About</button>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link="experience">Experience</button>
           </li>
-<!-- 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Research</button>
+            <button class="navbar-link" data-nav-link="publications">Research & Patents</button>
           </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li> -->
-
         </ul>
-
       </nav>
 
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme" title="Toggle Dark/Light Mode">
+          <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
+          <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
+        </button>
+        <a href="mailto:mohammad.al.qudah@hotmail.com" class="btn-cta">
+          <ion-icon name="mail-outline"></ion-icon>
+          <span>Contact</span>
+        </a>
+      </div>
+    </div>
+  </header>
 
+  <!-- Main Layout Container -->
+  <main class="layout-container">
 
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Research scientist experience in Machine Learning. 
-            Experienced in converting intriguing high level questions into full fledged Machine Learning solutions. Working with different stakeholders to understand requirements, design solutions, hands-on and deliver production code. Experienced managing and delivering high quality software solutions for ML. Experience in cloud computing for ML (Dockers, Kubelfow .. etc.).
-          </p>
-          <p>
-            I like statistics and I build data pipelines to analyze data and train models.
-          </p>
-           
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">News</h3>
-
-          <ul>
-
-            <li class="news-text">
-              09/2023: Successfully defended my PhD dissertation!
-            </li>
-
-            <li class="news-text">
-              08/2023: New paper published in the Journal IEEE Access (IF: 3.476) <a style="display:inline;" href="./assets/pdf/Enhancing_Weather-Related_Outage_Prediction_and_Precursor_Discovery_through_Attention-Based_Multi-Level_Modeling.pdf" target="_blank">[PDF]</a>
-              <a style="display:inline;" href="https://ieeexplore.ieee.org/abstract/document/10219427" target="_blank">[LINK]</a>
-            </li>
-
-            <li class="news-text">
-              12/2022: Joined Best Buy as a Senior Machine Learning Scientist!
-            </li>
-
-            <li class="news-text">
-              12/2022: New paper published in the Journal IEEE Access (IF: 3.476) <a style="display:inline;" href="./assets/pdf/Automated_Power_System_Fault_Prediction_and_Precursor_Discovery_Using_Multi-Modal_Data.pdf" target="_blank">[PDF]</a>
-              <a style="display:inline;" href="https://ieeexplore.ieee.org/abstract/document/10003227" target="_blank">[LINK]</a>
-            </li>
-
-            <li class="news-text">
-              07/2022: Final version of our IEEE Transactions of Power Systems paper is out (IF: 7.326) <a style="display:inline;" href="./assets/pdf/ALQUDAH-IEEE-POWER-SYSTEMS.pdf" target="_blank">[PDF]</a>
-              <a style="display:inline;" href="https://ieeexplore.ieee.org/document/9650703" target="_blank">[LINK]</a>
-            </li>
-
-            <li class="news-text">
-              01/2022: Last Day at IKEA USA! 
-            </li>
-           
-            <li class="news-text">
-              12/2021: We Moved to Seattle !!
-            </li>
-
-            <li class="news-text">
-              08/2020: Started Working at IKEA USA as a Data Scientist
-            </li>
-
-            <li class="news-text">
-              07/2020: Last day at Kulicke and Soffa! Thank you for a great 5 years.
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <!-- <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section> -->
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+    <!-- Left Sticky Profile Card (Sidebar) -->
+    <aside class="profile-sidebar" data-sidebar>
+      <div class="profile-card">
+        <div class="profile-top">
+          <div class="avatar-wrapper">
+            <div class="monogram-avatar" aria-label="Mohammad Alqudah Monogram">
+              <span>MA</span>
             </div>
+            <span class="status-indicator" title="Principal Applied Scientist @ Microsoft"></span>
+          </div>
 
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
+          <div class="profile-identity">
+            <h1 class="profile-name">Mohammad Alqudah, PhD</h1>
+            <p class="profile-role">Principal Applied Scientist</p>
+            <div class="profile-org">
+              <ion-icon name="business-outline"></ion-icon>
+              <span>Microsoft · Collab AI Research</span>
             </div>
-
-          </section>
-
+          </div>
         </div>
 
+        <!-- Scholar Metrics Strip -->
+        <div class="metrics-strip">
+          <a href="https://scholar.google.com/citations?hl=en&user=NmyJed4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" class="metric-box" title="View Google Scholar Profile">
+            <span class="metric-value">230+</span>
+            <span class="metric-label">Citations</span>
+          </a>
+          <div class="metric-divider"></div>
+          <a href="https://scholar.google.com/citations?hl=en&user=NmyJed4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" class="metric-box" title="View Google Scholar Profile">
+            <span class="metric-value">7</span>
+            <span class="metric-label">h-index</span>
+          </a>
+          <div class="metric-divider"></div>
+          <button class="metric-box" data-jump-page="publications" title="View Patents">
+            <span class="metric-value">5</span>
+            <span class="metric-label">Patents</span>
+          </button>
+        </div>
 
-        <!--
-          - clients
-        -->
+        <button class="sidebar-toggle-btn" data-sidebar-btn aria-expanded="false">
+          <span>Contact & Profiles</span>
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </button>
 
-        <!-- <section class="clients">
+        <div class="profile-details">
+          <div class="divider"></div>
 
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+              <div class="contact-meta">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Seattle, Washington, USA</span>
+              </div>
             </li>
 
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="school-outline"></ion-icon>
+              </div>
+              <div class="contact-meta">
+                <span class="contact-label">Education</span>
+                <span class="contact-value">Ph.D. in Computer Science</span>
+              </div>
             </li>
 
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+              <div class="contact-meta">
+                <span class="contact-label">Email</span>
+                <a href="mailto:mohammad.al.qudah@hotmail.com" class="contact-value link">mohammad.al.qudah@hotmail.com</a>
+              </div>
             </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
           </ul>
 
-        </section> -->
+          <div class="divider"></div>
 
-      </article>
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
+          <!-- Social & Academic Profiles -->
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/mohammadalqudah/" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://scholar.google.com/citations?hl=en&user=NmyJed4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" class="social-btn" title="Google Scholar">
+              <ion-icon name="school-outline"></ion-icon>
+              <span>Scholar</span>
+            </a>
+            <a href="https://www.microsoft.com/en-us/research/people/mohammad-alqudah/" target="_blank" rel="noopener" class="social-btn" title="Microsoft Research">
+              <ion-icon name="globe-outline"></ion-icon>
+              <span>MSR</span>
+            </a>
+            <a href="https://github.com/malquda1" target="_blank" rel="noopener" class="social-btn" title="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+              <span>GitHub</span>
+            </a>
           </div>
+        </div>
+      </div>
+    </aside>
 
-          <ol class="timeline-list">
+    <!-- Right Content Area -->
+    <div class="content-area">
 
-            <li class="timeline-item">
+      <!-- ==========================================
+           #ABOUT PAGE
+      =========================================== -->
+      <article class="page-section active" data-page="about">
 
-              <h4 class="h4 timeline-item-title">Temple University, Philadephia, PA</h4>
-              <span>PhD</span>
-
-              <span>2018 — 2023</span>
-
-              <p class="timeline-text">
-                Dissertation: "Learning from Multi-modal Spatiotemporal Data: Machine Learning Applications to
-                Advance Resilience in Smart Grids".
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">State University of New York at Binghamton</h4>
-              <span>Msc</span>
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                Thesis: "A Scalabe Hybrid Model for Health Care Insurance Fraud Detection Using Association Rules And Random Forest"
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Jordan University of Sciece and Technology</h4>
-              <span>Bsc</span>
-              <span>2007 — 2012</span>
-
-              
-              <p class="timeline-text">
-                Senior project: “Arabic Voice Control System for Mozilla Firefox”
-              </p>
-
-            </li>
-
-          </ol>
-
+        <!-- Hero Introduction -->
+        <section class="hero-card">
+          <div class="badge-pill">
+            <span class="pulse-dot"></span>
+            <span>AI Research & Applied Machine Learning</span>
+          </div>
+          <h2 class="hero-headline">
+            Building intelligent systems that integrate <span class="text-gradient">AI into everyday collaboration</span>.
+          </h2>
+          <p class="hero-bio">
+            I am a <strong>Principal Applied Scientist / Manager at Microsoft</strong> within the <strong>Collab AI Research</strong> group (AI for Meetings & Collaborative Apps). My work focuses on bridging foundational AI research and human-computer interaction to create intelligent, user-centric experiences that elevate productivity and decision-making at scale.
+          </p>
+          <p class="hero-bio">
+            With over a decade of experience across industry and academia—including leading Generative AI initiatives at <strong>Best Buy</strong>, data science at <strong>IKEA Digital</strong>, and earning my Ph.D. in Computer Science (Machine Learning) from <strong>Temple University</strong>—I specialize in translating high-level ambiguous challenges into production-grade LLM, RAG, and multimodal machine learning systems.
+          </p>
         </section>
 
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
+        <!-- Core Research & Technical Pillars -->
+        <section class="section-block">
+          <div class="section-header">
+            <h3 class="section-title">Focus Areas</h3>
+            <p class="section-subtitle">Core domains across research and large-scale production systems</p>
           </div>
 
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Senior Machine Learning Scientist</h4>
-              <h4 class="h4 timeline-item-title">Best Buy, Seattle, WA</h4>
-
-              <div class="title-wrapper">
-                <span>12/2022 — Now</span>
+          <div class="pillars-grid">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <ion-icon name="sparkles-outline"></ion-icon>
               </div>
-
-                <ol class="timeline-list">
-                  <li class="timeline-item"> 
-                    <p class="timeline-text">
-                    <p class="timeline-text">
-                      Leading Projects in the language models for enhancing the digital customer experience.
-                    </p>
-                  </li>
-                  <li class="timeline-item"> 
-                    <p class="timeline-text">
-                      Projects: customer review topic extraction and summarization. Replace a 3rd party solution. Question generation and answering through retrieval augmented generation (RAG).
-                    </p>
-                  </li>
-                       <p class="timeline-text">- Leading a project topic extraction and review summarization using in-house tools and models.</p>
-                       <p class="timeline-text">- Leading and hands-on research for topic extraction including POC while utilizing transformers/LMs</p>
-                       <p class="timeline-text">- Designing production batch-processes using GCP. Delivering code repositories with CI/CD </p>
-                       <p class="timeline-text">- Leading software design, development and review </p>
-                       <p class="timeline-text">- Working on solutions for question generation and answering through retrieval augmented generation (RAG) and LLMs. </p>
-                      </p>  
-                  </li>
-                  <li class="timeline-item"> 
-                    <p class="timeline-text">
-                      Technologies: RAG, GCP, VertixAI, BigQuery, Python, Torch, Transformers, BERTopic and other
-                    </p>
-                  </li>
-                </ol>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Data Scientist</h4>
-              <h4 class="h4 timeline-item-title">IKEA Digital, Conshohocken, PA</h4>
-
-              <div class="title-wrapper">
-                <span>08/2020 — 01/2022</span>
-              </div>
-
-              <ol class="timeline-list">
-                <li class="timeline-item"> 
-                  <p class="timeline-text">
-                  Delivered projects: forecasting engine (to steer deployments and promotions), basket analysis (product
-                  pricing), causality analysis (understand the impact of digital deployments.
-                </p>
-                </li>
-                <li class="timeline-item"> 
-                  <p class="timeline-text">
-                  End-to-end Data Science:
-                </p>
-                <p class="timeline-text">- Led a team of 8 people in the design/development of projects (forecasting, basket analysis)</p>
-                <p class="timeline-text">- Help drive the business in a data-driven fashion and understand the causality of events</p>
-                <p class="timeline-text">- Working with product and domain leads to define business-critical problems and design solutions o Maintain high-quality code and lead code and design reviews </p>
-                <p class="timeline-text">- Led the design and implementation of infrastructure solutions (MLOps, Data as a Product-DaaP) </p>
-                </li>
-                <li class="timeline-item"> 
-                  <p class="timeline-text">
-                  Leadership: building relationships with global stakeholders, tertial planning, technical leading, product ownership, and data science advocacy. Onboarded new team members and held training including product design, documentation, source control, product planning, and execution
-                </p>
-                </li>
-              </li>
-              <li class="timeline-item"> 
-                <p class="timeline-text">
-                  Technologies: Python (NumPy, Scikit-Learn, Keras ...), Google Cloud, Dockers, Kubernetes, Kubeflow, BigQuery, Google Analytics, Git, Cloud Functions, Google Data Studio, R
+              <h4 class="pillar-title">Generative AI & LLMs</h4>
+              <p class="pillar-desc">
+                Large Language Models, Retrieval-Augmented Generation (RAG), semantic distillation, prompt engineering, and scalable evaluation frameworks.
               </p>
-              </li>
-              </ol>
+            </div>
 
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Data Scientist</h4>
-              <h4 class="h4 timeline-item-title">Kulicke and Soffa, Fort Washington, PA</h4>
-
-              <div class="title-wrapper">
-                <span>08/2018 — 08/2020</span>
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <ion-icon name="people-outline"></ion-icon>
               </div>
-
-                <ol class="timeline-list">
-                  <li class="timeline-item"> 
-                    <p class="timeline-text">
-                      Delivered projects: online semi-supervised outlier detection for manufacturing robotics
-                  </p>
-                  </li>
-                  <li class="timeline-item"> 
-                    <p class="timeline-text">
-                      End-to-end Data Science: R&D for ML outlier detection for robotics' timeseries data (POC to production)
-                  </p>
-                  <p class="timeline-text">- Interact with stakeholders and leadership to collect requirements and communicate results</p>
-                  <p class="timeline-text">- Design and developed real-time novel outlier detection and classification models</p>
-                  <p class="timeline-text">- Handle high-frequency and high-dimensional robotics sensor data </p>
-                  <p class="timeline-text">- Handle model development including POC, implementation (C++/Py/C/Cython) and CICD </p>
-                  </li>
-                  <li class="timeline-item"> 
-                    <p class="timeline-text">
-                      Tools Design: design and implement data pipelines and custom ETL for robotics data. Design custom data visualization tools for analyzing ML results-offline
-                  </p>
-                  </li>
-                </li>
-                <li class="timeline-item"> 
-                  <p class="timeline-text">
-                    Technologies: Python, C++, Keras, Tensorflow, Pandas, NumPy, SciPy, Matplotlib/Seaborn/Bokeh
-                </p>
-                </li>
-                </ol>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Software Engineer</h4>
-              <h4 class="h4 timeline-item-title">Kulicke and Soffa, Fort Washington, PA</h4>
-
-              <div class="title-wrapper">
-                <span>07/2015 — 07/2018</span>
-              </div>
-
-              <ol class="timeline-list">
-                <li class="timeline-item"> 
-                  <p class="timeline-text">
-                    Delivered projects: data pipelines for high throughput data, a platform to monitor and analyze
-robotics, distributed data storage, real-time analytics
-                </p>
-                </li>
-                <li class="timeline-item"> 
-                  <p class="timeline-text">
-                    Embedded Robotics Data Visualizations
-                </p>
-                <p class="timeline-text">- Implemented low-level data pipelines for robotics using C++, Python, and NodeJS</p>
-                <p class="timeline-text">- Implemented customized data visualizations through open-source libraries such as Highcharts using
-                  JavaScript and jQuery</p>
-                <p class="timeline-text">- Implemented a server-client architecture using NodeJS to analyze and visualize real-time and offline data on multi-platforms (Windows, Linux, VxWorks) </p>
-                </li>
-                <li class="timeline-item"> 
-                  <p class="timeline-text">
-                    Data Analytics: Designed and implemented a python real-time analytics engine for real-time data insights
-                </p>
-                </li>
-              </li>
-              <li class="timeline-item"> 
-                <p class="timeline-text">
-                  Data Storage: Designed and implemented NoSQL storage to store real-time streaming data
+              <h4 class="pillar-title">Collaborative AI & HCI</h4>
+              <p class="pillar-desc">
+                AI for meetings and workplace productivity, human-AI interaction, real-time meeting intelligence, and personalized user experiences.
               </p>
-              </li>
-              </ol>
+            </div>
 
-            </li>
-
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Software Engineer (Intern)</h4>
-              <h4 class="h4 timeline-item-title">iA, Johnson City, NY</h4>
-
-              <div class="title-wrapper">
-                <span>01/2014 — 05/2015</span>
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <ion-icon name="analytics-outline"></ion-icon>
               </div>
-
-              <p class="timeline-text">
-                Design and develop software migration automation tools (C#) for legacy code. Object-oriented redesign.
+              <h4 class="pillar-title">Multimodal & Spatiotemporal ML</h4>
+              <p class="pillar-desc">
+                Attention-based multi-level modeling, representation learning, event precursor discovery, and high-frequency time-series analytics.
               </p>
+            </div>
 
-            </li>
-
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Research Assistant</h4>
-              <h4 class="h4 timeline-item-title">Binghamton University, Vestal, NY</h4>
-
-              <div class="title-wrapper">
-                <span>08/2013 — 12/2013</span>
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <ion-icon name="cloud-done-outline"></ion-icon>
               </div>
-
-              <p class="timeline-text">
-                Research in analytics techniques, and data mining
+              <h4 class="pillar-title">Production MLOps & Architecture</h4>
+              <p class="pillar-desc">
+                End-to-end ML system design, distributed data pipelines, vector stores, cloud-native orchestration (Azure / GCP / Kubernetes), and CI/CD.
               </p>
-
-            </li>
-
-          </ol>
-
+            </div>
+          </div>
         </section>
 
-        <!-- <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section> -->
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="research" data-page="research">
-
-        <header>
-          <h2 class="h2 article-title">Research</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
+        <!-- Featured Recent Publication Callout -->
+        <section class="section-block">
+          <div class="section-header">
+            <h3 class="section-title">Featured Research</h3>
+            <button class="text-link-btn" data-jump-page="publications">
+              <span>View all publications & patents</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
             </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
           </div>
 
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
+          <div class="featured-pub-card" style="margin-bottom: 16px;">
+            <div class="pub-meta-top">
+              <span class="venue-badge highlight">arXiv 2026 · Enterprise AI Agents</span>
+              <span class="pub-year">June 2026</span>
+            </div>
+            <h4 class="pub-title">
+              <a href="https://arxiv.org/abs/2606.30775" target="_blank" rel="noopener">
+                A Single Rewrite Suffices: Empirical Lessons from Production Skill Description Optimization
               </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
+            </h4>
+            <p class="pub-authors">
+              Yangqiaoyu Zhou, <strong>Mohammad Alqudah</strong>, Kwei-Herng Lai, Aaron Halfaker, Yingqi Xiong, Yaar Harari
+            </p>
+            <p class="pub-abstract">
+              Investigates automated skill description optimization pipelines for enterprise AI agents, addressing skill collision in LLM query routing and demonstrating through systematic ablation that a single targeted LLM rewrite using false-positive and false-negative cases captures the bulk of production routing improvements.
+            </p>
+            <div class="pub-actions">
+              <a href="https://arxiv.org/abs/2606.30775" target="_blank" rel="noopener" class="pub-chip">
+                <ion-icon name="document-text-outline"></ion-icon>
+                <span>arXiv:2606.30775</span>
               </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
+              <a href="https://arxiv.org/pdf/2606.30775" target="_blank" rel="noopener" class="pub-chip">
+                <ion-icon name="download-outline"></ion-icon>
+                <span>PDF</span>
               </a>
-            </li>
+            </div>
+          </div>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
+          <div class="featured-pub-card">
+            <div class="pub-meta-top">
+              <span class="venue-badge highlight">NAACL 2025 · Industry Track</span>
+              <span class="pub-year">April 2025</span>
+            </div>
+            <h4 class="pub-title">
+              <a href="https://aclanthology.org/2025.naacl-industry.36/" target="_blank" rel="noopener">
+                RevieWeaver: Weaving Together Review Insights by Leveraging LLMs and Semantic Similarity
               </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
+            </h4>
+            <p class="pub-authors">
+              Jiban Adhikary, <strong>Mohammad Alqudah</strong>, Arun Palghat Udayashankar
+            </p>
+            <p class="pub-abstract">
+              Introduced a unified, scalable framework capable of distilling key product insights from up to 30 million customer reviews using semantic similarity, union-find clustering, and curated context grounding for cost-efficient, unbiased LLM summarization.
+            </p>
+            <div class="pub-actions">
+              <a href="https://aclanthology.org/2025.naacl-industry.36/" target="_blank" rel="noopener" class="pub-chip">
+                <ion-icon name="document-text-outline"></ion-icon>
+                <span>ACL Anthology</span>
               </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
+              <a href="https://aclanthology.org/2025.naacl-industry.36.pdf" target="_blank" rel="noopener" class="pub-chip">
+                <ion-icon name="download-outline"></ion-icon>
+                <span>PDF</span>
               </a>
-            </li>
+            </div>
+          </div>
+        </section>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+        <!-- Recent News & Milestones -->
+        <section class="section-block">
+          <div class="section-header">
+            <h3 class="section-title">Highlights & News</h3>
+          </div>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+          <div class="news-timeline">
+            <div class="news-item">
+              <span class="news-date">06 / 2026</span>
+              <div class="news-content">
+                <p>New preprint on arXiv: <strong>"A Single Rewrite Suffices: Empirical Lessons from Production Skill Description Optimization"</strong> on enterprise AI agent skill routing at Microsoft. <a href="https://arxiv.org/abs/2606.30775" target="_blank" rel="noopener">[arXiv:2606.30775]</a></p>
+              </div>
+            </div>
 
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
+            <div class="news-item">
+              <span class="news-date">05 / 2026</span>
+              <div class="news-content">
+                <p>Filed two new U.S. patents at <strong>Microsoft</strong>: <strong>"Communication Delivery and Modification Via Agent-Mediated Collaboration"</strong> and <strong>"Specification-Grounded Golden Data Validation"</strong> (May 29, 2026).</p>
+              </div>
+            </div>
 
-                <h3 class="project-title">Summary</h3>
+            <div class="news-item">
+              <span class="news-date">01 / 2026</span>
+              <div class="news-content">
+                <p>Filed U.S. patent at <strong>Microsoft</strong>: <strong>"Knowledge Graph Memory For Data Retrieval"</strong> (Jan 30, 2026).</p>
+              </div>
+            </div>
 
-                <p class="project-category">Web development</p>
+            <div class="news-item">
+              <span class="news-date">08 / 2025</span>
+              <div class="news-content">
+                <p>Filed U.S. patent at <strong>Microsoft</strong>: <strong>"System And Method For Reducing Intrusiveness Of Notifications In Real-Time Conversation"</strong> (Aug 29, 2025).</p>
+              </div>
+            </div>
 
-              </a>
-            </li>
+            <div class="news-item">
+              <span class="news-date">05 / 2025</span>
+              <div class="news-content">
+                <p>Filed U.S. patent at <strong>Microsoft</strong>: <strong>"Unsupervised Language Model Prompt Optimization For Complex Task Resolution"</strong> (May 28, 2025).</p>
+              </div>
+            </div>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+            <div class="news-item">
+              <span class="news-date">04 / 2025</span>
+              <div class="news-content">
+                <p>Our paper <strong>"RevieWeaver: Weaving Together Review Insights by Leveraging LLMs and Semantic Similarity"</strong> was published in <em>NAACL 2025 (Industry Track)</em>. <a href="https://aclanthology.org/2025.naacl-industry.36/" target="_blank" rel="noopener">[Paper]</a></p>
+              </div>
+            </div>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+            <div class="news-item">
+              <span class="news-date">2024</span>
+              <div class="news-content">
+                <p>Joined <strong>Microsoft</strong> (Collab AI Research) as a Principal Applied Scientist / Manager focusing on AI for Meetings and collaborative productivity applications.</p>
+              </div>
+            </div>
 
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
+            <div class="news-item">
+              <span class="news-date">09 / 2023</span>
+              <div class="news-content">
+                <p>Successfully defended my Ph.D. dissertation in Computer Science at <strong>Temple University</strong> advised by Prof. Zoran Obradovic!</p>
+              </div>
+            </div>
 
-                <h3 class="project-title">Task Manager</h3>
+            <div class="news-item">
+              <span class="news-date">08 / 2023</span>
+              <div class="news-content">
+                <p>Journal paper published in <em>IEEE Access</em>: "Enhancing Weather-Related Outage Prediction and Precursor Discovery through Attention-Based Multi-Level Modeling." <a href="./assets/pdf/Enhancing_Weather-Related_Outage_Prediction_and_Precursor_Discovery_through_Attention-Based_Multi-Level_Modeling.pdf" target="_blank">[PDF]</a> <a href="https://ieeexplore.ieee.org/abstract/document/10219427" target="_blank" rel="noopener">[IEEE]</a></p>
+              </div>
+            </div>
 
-                <p class="project-category">Applications</p>
+            <div class="news-item">
+              <span class="news-date">12 / 2022</span>
+              <div class="news-content">
+                <p>Joined <strong>Best Buy</strong> in Seattle as a Senior Applied Machine Learning Scientist leading GenAI customer experience initiatives.</p>
+              </div>
+            </div>
 
-              </a>
-            </li>
+            <div class="news-item">
+              <span class="news-date">12 / 2022</span>
+              <div class="news-content">
+                <p>New paper published in <em>IEEE Access</em>: "Automated Power System Fault Prediction and Precursor Discovery Using Multi-Modal Data." <a href="./assets/pdf/Automated_Power_System_Fault_Prediction_and_Precursor_Discovery_Using_Multi-Modal_Data.pdf" target="_blank">[PDF]</a> <a href="https://ieeexplore.ieee.org/abstract/document/10003227" target="_blank" rel="noopener">[IEEE]</a></p>
+              </div>
+            </div>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
+            <div class="news-item">
+              <span class="news-date">07 / 2022</span>
+              <div class="news-content">
+                <p>Final version of our paper published in <em>IEEE Transactions on Power Systems</em> (IF: 7.326). <a href="./assets/pdf/ALQUDAH-IEEE-POWER-SYSTEMS.pdf" target="_blank">[PDF]</a> <a href="https://ieeexplore.ieee.org/document/9650703" target="_blank" rel="noopener">[IEEE]</a></p>
+              </div>
+            </div>
+          </div>
         </section>
 
       </article>
 
 
+      <!-- ==========================================
+           #EXPERIENCE & EDUCATION (RESUME) PAGE
+      =========================================== -->
+      <article class="page-section" data-page="experience">
 
+        <!-- Industry Experience -->
+        <section class="section-block">
+          <div class="section-header">
+            <div class="header-with-icon">
+              <div class="section-icon-box">
+                <ion-icon name="briefcase-outline"></ion-icon>
+              </div>
+              <div>
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-subtitle">10+ years delivering production AI, ML, and software systems</p>
+              </div>
+            </div>
+          </div>
 
+          <div class="exp-timeline">
 
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
+            <!-- Microsoft -->
+            <div class="exp-card current">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Principal Applied Scientist / Manager</h3>
+                  <p class="exp-company">Microsoft · Collab AI Research <span class="exp-loc">— Redmond / Seattle, WA</span></p>
                 </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
+                <span class="exp-period active-badge">Present</span>
+              </div>
+              <div class="exp-body">
+                <p class="exp-summary">
+                  Leading applied research and development in Artificial Intelligence and Human-Computer Interaction within Microsoft Collaborative Apps and AI for Meetings.
+                </p>
+                <ul class="exp-bullets">
+                  <li>Driving integration of foundational AI and Large Language Models into everyday collaborative workflows to enhance workplace productivity, improve decision-making, and deliver personalized meeting experiences.</li>
+                  <li>Bridging cutting-edge ML/NLP research with large-scale product engineering across Microsoft collaborative platforms.</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Generative AI</span>
+                  <span class="tag">LLMs</span>
+                  <span class="tag">AI for Meetings</span>
+                  <span class="tag">Human-Computer Interaction</span>
+                  <span class="tag">Collaborative Apps</span>
                 </div>
+              </div>
+            </div>
 
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
+            <!-- Best Buy -->
+            <div class="exp-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Senior Applied Machine Learning Scientist</h3>
+                  <p class="exp-company">Best Buy <span class="exp-loc">— Seattle, WA</span></p>
                 </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
+                <span class="exp-period">12/2022 — 2024</span>
+              </div>
+              <div class="exp-body">
+                <p class="exp-summary">
+                  Led end-to-end Generative AI projects utilizing Large Language Models to transform the digital customer shopping experience.
+                </p>
+                <ul class="exp-bullets">
+                  <li><strong>RevieWeaver & Review Summarization:</strong> Architected and delivered an in-house review topic-mining, semantic distillation, and LLM summarization framework scaling to tens of millions of customer reviews (replacing a 3rd-party solution and published at <em>NAACL 2025</em>).</li>
+                  <li><strong>RAG Question Generation & Answering:</strong> Led research and production implementation for automated customer Q&A using Retrieval-Augmented Generation (RAG) and vector search.</li>
+                  <li>Partnered with product managers and engineering leadership to shape AI roadmaps, scope initiatives, design GCP batch/streaming pipelines, and establish CI/CD and feedback loops.</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">LLMs</span>
+                  <span class="tag">RAG</span>
+                  <span class="tag">LangChain</span>
+                  <span class="tag">PyTorch</span>
+                  <span class="tag">Transformers</span>
+                  <span class="tag">BERTopic</span>
+                  <span class="tag">Vertex AI</span>
+                  <span class="tag">BigQuery</span>
+                  <span class="tag">Dataflow</span>
                 </div>
+              </div>
+            </div>
 
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
+            <!-- Temple University RA -->
+            <div class="exp-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Graduate Research Assistant</h3>
+                  <p class="exp-company">Temple University (DABI Center) <span class="exp-loc">— Philadelphia, PA / Remote</span></p>
                 </div>
+                <span class="exp-period">02/2022 — 11/2022</span>
+              </div>
+              <div class="exp-body">
+                <p class="exp-summary">
+                  Dedicated doctoral research focus on multi-modal spatiotemporal representation learning, attention-based deep learning, and event precursor discovery in smart power grids.
+                </p>
+              </div>
+            </div>
 
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
+            <!-- IKEA Digital -->
+            <div class="exp-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Data Scientist</h3>
+                  <p class="exp-company">IKEA Digital <span class="exp-loc">— Conshohocken, PA</span></p>
                 </div>
+                <span class="exp-period">08/2020 — 01/2022</span>
+              </div>
+              <div class="exp-body">
+                <p class="exp-summary">
+                  Technical lead and product owner driving end-to-end machine learning products for global e-commerce and retail operations.
+                </p>
+                <ul class="exp-bullets">
+                  <li>Led a team of 8 in designing and delivering production ML systems: a <strong>forecasting engine</strong> (steering digital deployments and promotions), <strong>market basket analysis</strong> (product pricing), and <strong>causal inference</strong> (measuring impact of digital features).</li>
+                  <li>Spearheaded MLOps and Data-as-a-Product (DaaP) infrastructure on Google Cloud, Kubernetes, and Kubeflow.</li>
+                  <li>Partnered with global stakeholders for tertial planning, A/B experimentation, code/design reviews, and team mentorship.</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Scikit-Learn</span>
+                  <span class="tag">Keras</span>
+                  <span class="tag">GCP</span>
+                  <span class="tag">Kubernetes</span>
+                  <span class="tag">Kubeflow</span>
+                  <span class="tag">BigQuery</span>
+                  <span class="tag">Causal Inference</span>
+                </div>
+              </div>
+            </div>
 
-              </a>
-            </li>
+            <!-- Kulicke and Soffa (Data Scientist) -->
+            <div class="exp-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Data Scientist</h3>
+                  <p class="exp-company">Kulicke and Soffa <span class="exp-loc">— Fort Washington, PA</span></p>
+                </div>
+                <span class="exp-period">08/2018 — 08/2020</span>
+              </div>
+              <div class="exp-body">
+                <p class="exp-summary">
+                  R&D and production deployment of real-time machine learning for high-frequency semiconductor manufacturing robotics.
+                </p>
+                <ul class="exp-bullets">
+                  <li>Designed and deployed online semi-supervised outlier detection and classification models for high-dimensional robotics sensor time-series data (POC to C++/Python/Cython production).</li>
+                  <li>Built custom high-throughput ETL pipelines and offline interactive visualization suites for analyzing ML diagnostics.</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">C++ / Cython</span>
+                  <span class="tag">TensorFlow</span>
+                  <span class="tag">Keras</span>
+                  <span class="tag">Time-Series ML</span>
+                  <span class="tag">Bokeh</span>
+                </div>
+              </div>
+            </div>
 
-          </ul>
+            <!-- Kulicke and Soffa (Software Engineer) -->
+            <div class="exp-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Software Engineer</h3>
+                  <p class="exp-company">Kulicke and Soffa <span class="exp-loc">— Fort Washington, PA</span></p>
+                </div>
+                <span class="exp-period">07/2015 — 08/2018</span>
+              </div>
+              <div class="exp-body">
+                <ul class="exp-bullets">
+                  <li>Engineered low-level, high-throughput robotics data pipelines and server-client streaming architectures across Windows, Linux, and VxWorks using C++, Python, and Node.js.</li>
+                  <li>Designed a Python real-time analytics engine and NoSQL streaming storage for embedded equipment telemetry.</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">C++</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">NoSQL</span>
+                  <span class="tag">Embedded Systems</span>
+                </div>
+              </div>
+            </div>
 
+            <!-- Earlier Roles -->
+            <div class="exp-card compact">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Software Engineer Intern</h3>
+                  <p class="exp-company">iA <span class="exp-loc">— Johnson City, NY</span></p>
+                </div>
+                <span class="exp-period">01/2014 — 06/2015</span>
+              </div>
+              <div class="exp-body">
+                <p class="exp-summary">Designed software migration automation tools in C# and object-oriented redesign for legacy systems.</p>
+              </div>
+            </div>
+
+            <div class="exp-card compact">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Research Associate</h3>
+                  <p class="exp-company">Binghamton University <span class="exp-loc">— Vestal, NY</span></p>
+                </div>
+                <span class="exp-period">08/2013 — 12/2013</span>
+              </div>
+              <div class="exp-body">
+                <p class="exp-summary">Conducted research in data mining and predictive analytics techniques.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section-block">
+          <div class="section-header">
+            <div class="header-with-icon">
+              <div class="section-icon-box">
+                <ion-icon name="school-outline"></ion-icon>
+              </div>
+              <div>
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">Academic background in Computer Science and Systems Engineering</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-grid">
+            <div class="edu-card">
+              <div class="edu-top">
+                <span class="edu-degree">Ph.D. in Computer Science (Machine Learning)</span>
+                <span class="edu-year">2018 — 2023</span>
+              </div>
+              <h4 class="edu-school">Temple University · Philadelphia, PA</h4>
+              <p class="edu-detail">
+                <strong>Dissertation:</strong> <em>"Learning from Multi-modal Spatiotemporal Data: Machine Learning Applications to Advance Resilience in Smart Grids"</em> (Advisor: Prof. Zoran Obradovic)
+              </p>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-top">
+                <span class="edu-degree">M.S. in Industrial and Systems Engineering</span>
+                <span class="edu-year">2013 — 2015</span>
+              </div>
+              <h4 class="edu-school">State University of New York at Binghamton · Vestal, NY</h4>
+              <p class="edu-detail">
+                <strong>Thesis:</strong> <em>"A Scalable Hybrid Model for Health Care Insurance Fraud Detection Using Association Rules and Random Forest"</em>
+              </p>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-top">
+                <span class="edu-degree">B.S. in Computer Engineering (GPA: 3.55 / 4.0)</span>
+                <span class="edu-year">2007 — 2012</span>
+              </div>
+              <h4 class="edu-school">Jordan University of Science and Technology · Irbid, Jordan</h4>
+              <p class="edu-detail">
+                <strong>Senior Project:</strong> <em>"Arabic Voice Control System for Mozilla Firefox Using SVMs"</em>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technical Skills Matrix -->
+        <section class="section-block">
+          <div class="section-header">
+            <h3 class="section-title">Technical Expertise</h3>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h4 class="skill-group-title">AI, LLMs & Machine Learning</h4>
+              <div class="tech-tags">
+                <span class="tag">LLMs & Prompt Engineering</span>
+                <span class="tag">RAG & Vector Search</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">Transformers / HuggingFace</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">TensorFlow / Keras</span>
+                <span class="tag">BERTopic</span>
+                <span class="tag">Scikit-Learn</span>
+                <span class="tag">Spatiotemporal Modeling</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h4 class="skill-group-title">Languages & Core Engineering</h4>
+              <div class="tech-tags">
+                <span class="tag">Python</span>
+                <span class="tag">C++ / Cython</span>
+                <span class="tag">SQL</span>
+                <span class="tag">JavaScript / Node.js</span>
+                <span class="tag">C#</span>
+                <span class="tag">R</span>
+                <span class="tag">Git & CI/CD</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h4 class="skill-group-title">Cloud, Data & MLOps</h4>
+              <div class="tech-tags">
+                <span class="tag">Azure / GCP</span>
+                <span class="tag">Vertex AI</span>
+                <span class="tag">BigQuery</span>
+                <span class="tag">Docker & Kubernetes</span>
+                <span class="tag">Kubeflow</span>
+                <span class="tag">Spark / PySpark</span>
+                <span class="tag">Dataflow & Pub/Sub</span>
+                <span class="tag">Helm</span>
+              </div>
+            </div>
+          </div>
         </section>
 
       </article>
 
 
+      <!-- ==========================================
+           #PUBLICATIONS PAGE
+      =========================================== -->
+      <article class="page-section" data-page="publications">
 
+        <section class="section-block">
+          <div class="section-header">
+            <div class="header-with-icon">
+              <div class="section-icon-box">
+                <ion-icon name="library-outline"></ion-icon>
+              </div>
+              <div>
+                <h2 class="section-title">Publications & Patents</h2>
+                <p class="section-subtitle">Peer-reviewed articles and patent filings across LLMs, collaborative AI, and spatiotemporal ML</p>
+              </div>
+            </div>
+            <a href="https://scholar.google.com/citations?hl=en&user=NmyJed4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" class="scholar-header-btn">
+              <ion-icon name="open-outline"></ion-icon>
+              <span>Google Scholar Profile</span>
+            </a>
+          </div>
 
+          <!-- Filter Bar -->
+          <div class="pub-filters" role="tablist" aria-label="Filter publications by topic">
+            <button class="filter-pill active" data-pub-filter="all">All</button>
+            <button class="filter-pill" data-pub-filter="patent">Patents (5)</button>
+            <button class="filter-pill" data-pub-filter="llm">LLMs & NLP</button>
+            <button class="filter-pill" data-pub-filter="spatiotemporal">Spatiotemporal & Smart Grids</button>
+            <button class="filter-pill" data-pub-filter="thesis">Theses</button>
+          </div>
 
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
+          <!-- Patent Cubes Showcase Banner -->
+          <figure class="patents-showcase" data-pub-category="patent">
+            <div class="patents-img-wrapper">
+              <img src="./assets/images/patents-cubes.jpg" alt="Microsoft Patent Award Cubes — Mohammad Alqudah" loading="lazy">
+              <div class="patents-overlay">
+                <span class="patents-badge">
+                  <ion-icon name="sparkles-outline"></ion-icon>
+                  <span>Microsoft Patent Awards (2025 — 2026)</span>
+                </span>
+                <p class="patents-caption">
+                  Five U.S. patent filings in Agent-Mediated Collaboration, Knowledge Graph Memory, Prompt Optimization, Golden Data Validation, and Real-Time Conversation Intelligence.
+                </p>
+              </div>
+            </div>
           </figure>
-        </section>
 
-        <section class="contact-form">
+          <!-- Publications List -->
+          <div class="pub-list">
 
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            <!-- 2026 arXiv Preprint -->
+            <div class="pub-card" data-pub-category="llm">
+              <div class="pub-card-top">
+                <span class="venue-badge highlight">arXiv Preprint · Enterprise AI Agents</span>
+                <span class="pub-year">2026</span>
+              </div>
+              <h3 class="pub-card-title">
+                <a href="https://arxiv.org/abs/2606.30775" target="_blank" rel="noopener">
+                  A Single Rewrite Suffices: Empirical Lessons from Production Skill Description Optimization
+                </a>
+              </h3>
+              <p class="pub-card-authors">
+                Yangqiaoyu Zhou, <strong>Mohammad Alqudah</strong>, Kwei-Herng Lai, Aaron Halfaker, Yingqi Xiong, Yaar Harari
+              </p>
+              <p class="pub-card-venue">
+                <em>arXiv preprint arXiv:2606.30775 [cs.CL]</em>, June 2026
+              </p>
+              <div class="pub-actions">
+                <a href="https://arxiv.org/abs/2606.30775" target="_blank" rel="noopener" class="pub-chip">
+                  <ion-icon name="link-outline"></ion-icon>
+                  <span>arXiv:2606.30775</span>
+                </a>
+                <a href="https://arxiv.org/pdf/2606.30775" target="_blank" rel="noopener" class="pub-chip">
+                  <ion-icon name="document-text-outline"></ion-icon>
+                  <span>PDF</span>
+                </a>
+              </div>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <!-- Patent 1: 05/29/2026 -->
+            <div class="pub-card" data-pub-category="patent llm">
+              <div class="pub-card-top">
+                <span class="venue-badge highlight">U.S. Patent Application · Microsoft</span>
+                <span class="pub-year">May 29, 2026</span>
+              </div>
+              <h3 class="pub-card-title">
+                Communication Delivery And Modification Via Agent-Mediated Collaboration
+              </h3>
+              <p class="pub-card-authors">
+                Inventor: <strong>Mohammad Alqudah</strong> et al.
+              </p>
+              <p class="pub-card-venue">
+                <em>U.S. Patent Filing (05/29/2026)</em> — Agent-mediated communication workflows and intelligent message delivery/modification in collaborative environments.
+              </p>
+            </div>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+            <!-- Patent 2: 05/29/2026 -->
+            <div class="pub-card" data-pub-category="patent llm">
+              <div class="pub-card-top">
+                <span class="venue-badge highlight">U.S. Patent Application · Microsoft</span>
+                <span class="pub-year">May 29, 2026</span>
+              </div>
+              <h3 class="pub-card-title">
+                Specification-Grounded Golden Data Validation
+              </h3>
+              <p class="pub-card-authors">
+                Inventor: <strong>Mohammad Alqudah</strong> et al.
+              </p>
+              <p class="pub-card-venue">
+                <em>U.S. Patent Filing (05/29/2026)</em> — Automated specification-grounded validation and evaluation of golden datasets for AI systems.
+              </p>
+            </div>
 
-          </form>
+            <!-- Patent 3: 01/30/2026 -->
+            <div class="pub-card" data-pub-category="patent llm">
+              <div class="pub-card-top">
+                <span class="venue-badge highlight">U.S. Patent Application · Microsoft</span>
+                <span class="pub-year">Jan 30, 2026</span>
+              </div>
+              <h3 class="pub-card-title">
+                Knowledge Graph Memory For Data Retrieval
+              </h3>
+              <p class="pub-card-authors">
+                Inventor: <strong>Mohammad Alqudah</strong> et al.
+              </p>
+              <p class="pub-card-venue">
+                <em>U.S. Patent Filing (01/30/2026)</em> — Structured knowledge graph memory architectures for context-aware enterprise data retrieval and AI grounding.
+              </p>
+            </div>
 
+            <!-- Patent 4: 08/29/2025 -->
+            <div class="pub-card" data-pub-category="patent llm">
+              <div class="pub-card-top">
+                <span class="venue-badge highlight">U.S. Patent Application · Microsoft</span>
+                <span class="pub-year">Aug 29, 2025</span>
+              </div>
+              <h3 class="pub-card-title">
+                System And Method For Reducing Intrusiveness Of Notifications In Real-Time Conversation
+              </h3>
+              <p class="pub-card-authors">
+                Inventor: <strong>Mohammad Alqudah</strong> et al.
+              </p>
+              <p class="pub-card-venue">
+                <em>U.S. Patent Filing (08/29/2025)</em> — Intelligent notification timing and delivery mechanisms to minimize cognitive disruption during live meetings and real-time conversations.
+              </p>
+            </div>
+
+            <!-- Patent 5: 05/28/2025 -->
+            <div class="pub-card" data-pub-category="patent llm">
+              <div class="pub-card-top">
+                <span class="venue-badge highlight">U.S. Patent Application · Microsoft</span>
+                <span class="pub-year">May 28, 2025</span>
+              </div>
+              <h3 class="pub-card-title">
+                Unsupervised Language Model Prompt Optimization For Complex Task Resolution
+              </h3>
+              <p class="pub-card-authors">
+                Inventor: <strong>Mohammad Alqudah</strong> et al.
+              </p>
+              <p class="pub-card-venue">
+                <em>U.S. Patent Filing (05/28/2025)</em> — Automated, unsupervised prompt optimization pipelines for resolving complex multi-step tasks with Large Language Models.
+              </p>
+            </div>
+
+            <!-- 2025 NAACL -->
+            <div class="pub-card" data-pub-category="llm">
+              <div class="pub-card-top">
+                <span class="venue-badge highlight">NAACL 2025 · Industry Track</span>
+                <span class="pub-year">2025</span>
+              </div>
+              <h3 class="pub-card-title">
+                <a href="https://aclanthology.org/2025.naacl-industry.36/" target="_blank" rel="noopener">
+                  RevieWeaver: Weaving Together Review Insights by Leveraging LLMs and Semantic Similarity
+                </a>
+              </h3>
+              <p class="pub-card-authors">
+                Jiban Adhikary, <strong>Mohammad Alqudah</strong>, Arun Palghat Udayashankar
+              </p>
+              <p class="pub-card-venue">
+                <em>Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 3: Industry Track)</em>, pp. 431–448
+              </p>
+              <div class="pub-actions">
+                <a href="https://aclanthology.org/2025.naacl-industry.36/" target="_blank" rel="noopener" class="pub-chip">
+                  <ion-icon name="link-outline"></ion-icon>
+                  <span>ACL Anthology</span>
+                </a>
+                <a href="https://aclanthology.org/2025.naacl-industry.36.pdf" target="_blank" rel="noopener" class="pub-chip">
+                  <ion-icon name="document-text-outline"></ion-icon>
+                  <span>PDF</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 2023 IEEE Access -->
+            <div class="pub-card" data-pub-category="spatiotemporal">
+              <div class="pub-card-top">
+                <span class="venue-badge">IEEE Access · Journal (IF: 3.9)</span>
+                <span class="pub-year">2023</span>
+              </div>
+              <h3 class="pub-card-title">
+                <a href="https://ieeexplore.ieee.org/abstract/document/10219427" target="_blank" rel="noopener">
+                  Enhancing Weather-Related Outage Prediction and Precursor Discovery Through Attention-Based Multi-Level Modeling
+                </a>
+              </h3>
+              <p class="pub-card-authors">
+                <strong>Mohammad Alqudah</strong>, Zoran Obradovic
+              </p>
+              <p class="pub-card-venue">
+                <em>IEEE Access</em>, vol. 11, pp. 94840–94851, 2023
+              </p>
+              <div class="pub-actions">
+                <a href="./assets/pdf/Enhancing_Weather-Related_Outage_Prediction_and_Precursor_Discovery_through_Attention-Based_Multi-Level_Modeling.pdf" target="_blank" class="pub-chip">
+                  <ion-icon name="document-text-outline"></ion-icon>
+                  <span>PDF</span>
+                </a>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10219427" target="_blank" rel="noopener" class="pub-chip">
+                  <ion-icon name="link-outline"></ion-icon>
+                  <span>IEEE Xplore</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 2023 PhD Dissertation -->
+            <div class="pub-card" data-pub-category="thesis spatiotemporal">
+              <div class="pub-card-top">
+                <span class="venue-badge">Ph.D. Dissertation · Temple University</span>
+                <span class="pub-year">2023</span>
+              </div>
+              <h3 class="pub-card-title">
+                Learning from Multi-Modal Spatiotemporal Data: Machine Learning Approaches to Advance Resilience in Smart Grids
+              </h3>
+              <p class="pub-card-authors">
+                <strong>Mohammad K. Alqudah</strong> (Advisor: Prof. Zoran Obradovic)
+              </p>
+              <p class="pub-card-venue">
+                <em>Department of Computer and Information Sciences, Temple University</em>, Fall 2023
+              </p>
+            </div>
+
+            <!-- 2022 IEEE Access -->
+            <div class="pub-card" data-pub-category="spatiotemporal">
+              <div class="pub-card-top">
+                <span class="venue-badge">IEEE Access · Journal</span>
+                <span class="pub-year">2022</span>
+              </div>
+              <h3 class="pub-card-title">
+                <a href="https://ieeexplore.ieee.org/abstract/document/10003227" target="_blank" rel="noopener">
+                  Automated Power System Fault Prediction and Precursor Discovery Using Multi-Modal Data
+                </a>
+              </h3>
+              <p class="pub-card-authors">
+                <strong>Mohammad Alqudah</strong>, Mladen Kezunovic, Zoran Obradovic
+              </p>
+              <p class="pub-card-venue">
+                <em>IEEE Access</em>, vol. 11, pp. 7283–7296, 2022
+              </p>
+              <div class="pub-actions">
+                <a href="./assets/pdf/Automated_Power_System_Fault_Prediction_and_Precursor_Discovery_Using_Multi-Modal_Data.pdf" target="_blank" class="pub-chip">
+                  <ion-icon name="document-text-outline"></ion-icon>
+                  <span>PDF</span>
+                </a>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10003227" target="_blank" rel="noopener" class="pub-chip">
+                  <ion-icon name="link-outline"></ion-icon>
+                  <span>IEEE Xplore</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 2021/2022 IEEE Transactions on Power Systems -->
+            <div class="pub-card" data-pub-category="spatiotemporal">
+              <div class="pub-card-top">
+                <span class="venue-badge highlight">IEEE Trans. Power Systems (IF: 7.3)</span>
+                <span class="pub-year">2022</span>
+              </div>
+              <h3 class="pub-card-title">
+                <a href="https://ieeexplore.ieee.org/document/9650703" target="_blank" rel="noopener">
+                  Fault Detection Utilizing Convolution Neural Network on Timeseries Synchrophasor Data From Phasor Measurement Units
+                </a>
+              </h3>
+              <p class="pub-card-authors">
+                <strong>Mohammad Alqudah</strong>, Martin Pavlovski, Tatjana Dokic, Mladen Kezunovic, Y. Hu, Zoran Obradovic
+              </p>
+              <p class="pub-card-venue">
+                <em>IEEE Transactions on Power Systems</em>, vol. 37, no. 5, pp. 3434–3442, 2022
+              </p>
+              <div class="pub-actions">
+                <a href="./assets/pdf/ALQUDAH-IEEE-POWER-SYSTEMS.pdf" target="_blank" class="pub-chip">
+                  <ion-icon name="document-text-outline"></ion-icon>
+                  <span>PDF</span>
+                </a>
+                <a href="https://ieeexplore.ieee.org/document/9650703" target="_blank" rel="noopener" class="pub-chip">
+                  <ion-icon name="link-outline"></ion-icon>
+                  <span>IEEE Xplore</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 2021 IEEE Transactions on Instrumentation and Measurement -->
+            <div class="pub-card" data-pub-category="spatiotemporal">
+              <div class="pub-card-top">
+                <span class="venue-badge">IEEE Trans. Instrumentation & Measurement</span>
+                <span class="pub-year">2021</span>
+              </div>
+              <h3 class="pub-card-title">
+                <a href="https://doi.org/10.1109/TIM.2021.3115583" target="_blank" rel="noopener">
+                  Hierarchical Convolutional Neural Networks for Event Classification on PMU Measurements
+                </a>
+              </h3>
+              <p class="pub-card-authors">
+                Martin Pavlovski, <strong>Mohammad Alqudah</strong>, Tatjana Dokic, A. A. Hai, Mladen Kezunovic, Zoran Obradovic
+              </p>
+              <p class="pub-card-venue">
+                <em>IEEE Transactions on Instrumentation and Measurement</em>, vol. 70, pp. 1–13, 2021
+              </p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1109/TIM.2021.3115583" target="_blank" rel="noopener" class="pub-chip">
+                  <ion-icon name="link-outline"></ion-icon>
+                  <span>IEEE Xplore</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 2021 IEEE Access Transfer Learning -->
+            <div class="pub-card" data-pub-category="spatiotemporal">
+              <div class="pub-card-top">
+                <span class="venue-badge">IEEE Access · Journal</span>
+                <span class="pub-year">2021</span>
+              </div>
+              <h3 class="pub-card-title">
+                <a href="https://doi.org/10.1109/ACCESS.2021.3111727" target="_blank" rel="noopener">
+                  Transfer Learning for Event Detection From PMU Measurements With Scarce Labels
+                </a>
+              </h3>
+              <p class="pub-card-authors">
+                A. A. Hai, Tatjana Dokic, Martin Pavlovski, T. Mohamed, D. Saranovic, <strong>Mohammad Alqudah</strong>, Mladen Kezunovic, Zoran Obradovic
+              </p>
+              <p class="pub-card-venue">
+                <em>IEEE Access</em>, vol. 9, pp. 127420–127432, 2021
+              </p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1109/ACCESS.2021.3111727" target="_blank" rel="noopener" class="pub-chip">
+                  <ion-icon name="link-outline"></ion-icon>
+                  <span>IEEE Xplore</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 2020 HICSS / ArXiv -->
+            <div class="pub-card" data-pub-category="spatiotemporal">
+              <div class="pub-card-top">
+                <span class="venue-badge">HICSS / arXiv</span>
+                <span class="pub-year">2020</span>
+              </div>
+              <h3 class="pub-card-title">
+                <a href="https://arxiv.org/abs/2206.08832" target="_blank" rel="noopener">
+                  Prediction of Solar Radiation Based on Spatial and Temporal Embeddings for Solar Generation Forecast
+                </a>
+              </h3>
+              <p class="pub-card-authors">
+                <strong>Mohammad Alqudah</strong>, Tatjana Dokic, Mladen Kezunovic, Zoran Obradovic
+              </p>
+              <p class="pub-card-venue">
+                <em>Proceedings of the 53rd Hawaii International Conference on System Sciences (HICSS)</em> / arXiv:2206.08832
+              </p>
+              <div class="pub-actions">
+                <a href="https://arxiv.org/abs/2206.08832" target="_blank" rel="noopener" class="pub-chip">
+                  <ion-icon name="link-outline"></ion-icon>
+                  <span>arXiv</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 2015 MS Thesis -->
+            <div class="pub-card" data-pub-category="thesis">
+              <div class="pub-card-top">
+                <span class="venue-badge">M.S. Thesis · Binghamton University</span>
+                <span class="pub-year">2015</span>
+              </div>
+              <h3 class="pub-card-title">
+                A Scalable Hybrid Model for Health Care Insurance Fraud Detection Using Association Rules and Random Forest
+              </h3>
+              <p class="pub-card-authors">
+                <strong>Mohammad Alqudah</strong>
+              </p>
+              <p class="pub-card-venue">
+                <em>State University of New York at Binghamton</em>, 2015
+              </p>
+            </div>
+
+          </div>
         </section>
 
       </article>
@@ -1268,22 +1173,24 @@ robotics, distributed data storage, real-time analytics
 
   </main>
 
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© <span id="current-year">2026</span> Mohammad Alqudah, PhD. Built with clean 2026 web standards.</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/mohammadalqudah/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?hl=en&user=NmyJed4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="mailto:mohammad.al.qudah@hotmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
 
-
-
-
-
-  <!--
-    - custom js link
-  -->
+  <!-- Custom JS -->
   <script src="./assets/js/script.js"></script>
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

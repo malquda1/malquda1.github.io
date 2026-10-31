@@ -1,1 +1,2 @@
-Cloned from https://github.com/codewithsadee/vcard-personal-portfolio.git
+# Mohammad Alqudah, PhD — Personal Website & Academic Portfolio
+Live at [https://malquda1.github.io/](https://malquda1.github.io/)

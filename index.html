@@ -17,12 +17,13 @@
   <meta property="og:title" content="Mohammad Alqudah, PhD — Principal Applied Scientist">
   <meta property="og:description" content="Principal Applied Scientist at Microsoft (Collab AI Research). Research and applied AI across LLMs, Human-Computer Interaction, and Multimodal Machine Learning.">
   <meta property="og:url" content="https://malquda1.github.io/">
-  <meta property="og:image" content="https://malquda1.github.io/assets/images/logo.svg">
+  <meta property="og:image" content="https://malquda1.github.io/assets/images/IMG_4260_jpeg.jpg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Mohammad Alqudah, PhD — Principal Applied Scientist">
   <meta name="twitter:description" content="Principal Applied Scientist at Microsoft (Collab AI Research). AI, LLMs, HCI, and Machine Learning.">
+  <meta name="twitter:image" content="https://malquda1.github.io/assets/images/IMG_4260_jpeg.jpg">
 
   <!-- Modern SVG Favicon -->
   <link rel="icon" href="./assets/images/logo.svg" type="image/svg+xml">
@@ -56,6 +57,7 @@
       }
     ],
     "url": "https://malquda1.github.io/",
+    "image": "https://malquda1.github.io/assets/images/IMG_4260_jpeg.jpg",
     "sameAs": [
       "https://www.linkedin.com/in/mohammadalqudah/",
       "https://scholar.google.com/citations?hl=en&user=NmyJed4AAAAJ&view_op=list_works&sortby=pubdate",
@@ -124,9 +126,13 @@
     <aside class="profile-sidebar" data-sidebar>
       <div class="profile-card">
         <div class="profile-top">
-          <div class="avatar-wrapper">
-            <div class="monogram-avatar" aria-label="Mohammad Alqudah Monogram">
+          <div class="avatar-wrapper clickable" tabindex="0" role="button" aria-label="Click to enlarge photo" title="Click to view full photo">
+            <img src="./assets/images/IMG_4260_jpeg.jpg" alt="Mohammad Alqudah, PhD" class="avatar-img" width="86" height="86" onerror="this.style.display='none'; document.querySelector('.monogram-avatar').style.display='flex';">
+            <div class="monogram-avatar" aria-label="Mohammad Alqudah Monogram" style="display: none;">
               <span>MA</span>
+            </div>
+            <div class="avatar-zoom-badge" aria-hidden="true">
+              <ion-icon name="expand-outline"></ion-icon>
             </div>
             <span class="status-indicator" title="Principal Applied Scientist @ Microsoft"></span>
           </div>
@@ -1184,6 +1190,23 @@
       </div>
     </div>
   </footer>
+
+  <!-- Photo Lightbox Modal -->
+  <div class="photo-lightbox" id="photo-lightbox" aria-hidden="true" role="dialog" aria-label="Profile photo full view">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close image preview">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <div class="lightbox-image-wrapper">
+        <img src="./assets/images/IMG_4260_jpeg.jpg" alt="Mohammad Alqudah, PhD - Portrait" class="lightbox-img">
+        <div class="lightbox-caption">
+          <h3>Mohammad Alqudah, PhD</h3>
+          <p>Principal Applied Scientist at Microsoft · Redmond, WA</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Custom JS -->
   <script src="./assets/js/script.js"></script>

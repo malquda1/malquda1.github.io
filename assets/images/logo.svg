@@ -1,19 +1,45 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#09090b"/>
+      <stop offset="0%" stop-color="#0e1626"/>
+      <stop offset="50%" stop-color="#080c16"/>
+      <stop offset="100%" stop-color="#030712"/>
     </linearGradient>
-    <linearGradient id="accentGrad" x1="28" y1="36" x2="228" y2="220" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#818cf8"/>
-      <stop offset="50%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#34d399"/>
+    <linearGradient id="cyanIndigo" x1="50" y1="78" x2="138" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.6"/>
     </linearGradient>
   </defs>
-  <rect width="256" height="256" rx="60" fill="url(#bgGrad)"/>
-  <rect x="6" y="6" width="244" height="244" rx="54" stroke="url(#accentGrad)" stroke-width="4" stroke-opacity="0.45"/>
-  <!-- Stylized M + A Monogram -->
-  <path d="M46 184V76L88 140L130 76V184" stroke="url(#accentGrad)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M152 184L184 76L216 184" stroke="#fafafa" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M162 152H206" stroke="url(#accentGrad)" stroke-width="18" stroke-linecap="round"/>
+
+  <!-- Modern dark squircle base -->
+  <rect x="8" y="8" width="240" height="240" rx="54" fill="url(#bgGrad)"/>
+  <rect x="8" y="8" width="240" height="240" rx="54" stroke="url(#borderGrad)" stroke-width="4"/>
+
+  <!-- Monogram 'M' -->
+  <path d="M50 180V78L94 138L138 78V180" 
+        stroke="url(#cyanIndigo)" 
+        stroke-width="22" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+
+  <!-- Monogram 'A' -->
+  <path d="M156 180L188 78L220 180" 
+        stroke="#ffffff" 
+        stroke-width="22" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+
+  <!-- 'A' Crossbar -->
+  <path d="M166 146H210" 
+        stroke="#38bdf8" 
+        stroke-width="20" 
+        stroke-linecap="round"/>
+
+  <!-- AI Spark / Node on A's peak -->
+  <circle cx="188" cy="78" r="5" fill="#38bdf8"/>
 </svg>

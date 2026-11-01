@@ -1442,215 +1442,198 @@
           </div>
         </section>
 
-        <!-- Airport Log / Flight Footprint -->
+        <!-- Airport Log / Flight Footprint (Interactive Terminal Board) -->
         <section class="content-section">
           <div class="header-with-icon">
             <div class="section-icon-box">
               <ion-icon name="airplane-outline"></ion-icon>
             </div>
             <div>
-              <h2 class="section-title">The Flight Log (Airport IATA Footprint)</h2>
+              <h2 class="section-title">The Flight Log (Airport Footprint)</h2>
               <p class="section-desc">Terminal footsteps, transit memories, and air corridors visited across continents.</p>
             </div>
           </div>
 
-          <div class="airports-grid">
-            <!-- Home Base -->
-            <div class="airport-pill">
-              <span class="airport-code">SEA</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 Seattle</span>
-                <span class="airport-name">Seattle–Tacoma Int'l</span>
+          <div class="flight-board-container">
+            <!-- Terminal Board Header -->
+            <div class="flight-board-header">
+              <div class="flight-board-stats">
+                <span class="flight-stat-pill home-base">
+                  <ion-icon name="pin-outline"></ion-icon>
+                  <span>Home Base: SEA</span>
+                </span>
+                <span class="flight-stat-pill">
+                  <ion-icon name="globe-outline"></ion-icon>
+                  <span>3 Continents</span>
+                </span>
+                <span class="flight-stat-pill">
+                  <ion-icon name="navigate-circle-outline"></ion-icon>
+                  <span>24 Terminals</span>
+                </span>
+              </div>
+
+              <!-- Region Filter Group -->
+              <div class="flight-filter-group" role="tablist" aria-label="Filter airports by region">
+                <button class="flight-filter-btn active" data-flight-filter="all">All (24)</button>
+                <button class="flight-filter-btn" data-flight-filter="me">Middle East (5)</button>
+                <button class="flight-filter-btn" data-flight-filter="eu">Europe (4)</button>
+                <button class="flight-filter-btn" data-flight-filter="us-west">US West (6)</button>
+                <button class="flight-filter-btn" data-flight-filter="us-east">US East &amp; Midwest (9)</button>
               </div>
             </div>
 
-            <!-- Middle East Hubs -->
-            <div class="airport-pill">
-              <span class="airport-code">DOH</span>
-              <div class="airport-info">
-                <span class="airport-city">🇶🇦 Doha</span>
-                <span class="airport-name">Hamad International</span>
-              </div>
-            </div>
+            <!-- Flight Baggage-Tag Mosaic -->
+            <div class="flight-chips-mosaic">
 
-            <div class="airport-pill">
-              <span class="airport-code">DXB</span>
-              <div class="airport-info">
-                <span class="airport-city">🇦🇪 Dubai</span>
-                <span class="airport-name">Dubai International</span>
+              <!-- Home Base -->
+              <div class="flight-chip home" data-flight-region="us-west" title="Seattle–Tacoma International Airport (Home Base)">
+                <span class="flight-chip-iata">SEA</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 Seattle</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">CAI</span>
-              <div class="airport-info">
-                <span class="airport-city">🇪🇬 Cairo</span>
-                <span class="airport-name">Cairo International</span>
+              <!-- Middle East -->
+              <div class="flight-chip" data-flight-region="me" title="Hamad International Airport">
+                <span class="flight-chip-iata">DOH</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇶🇦 Doha</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">AMM</span>
-              <div class="airport-info">
-                <span class="airport-city">🇯🇴 Amman</span>
-                <span class="airport-name">Queen Alia Int'l</span>
+              <div class="flight-chip" data-flight-region="me" title="Dubai International Airport">
+                <span class="flight-chip-iata">DXB</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇦🇪 Dubai</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">IST</span>
-              <div class="airport-info">
-                <span class="airport-city">🇹🇷 Istanbul</span>
-                <span class="airport-name">Istanbul Grand Airport</span>
+              <div class="flight-chip" data-flight-region="me" title="Cairo International Airport">
+                <span class="flight-chip-iata">CAI</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇪🇬 Cairo</span>
               </div>
-            </div>
 
-            <!-- European Hubs -->
-            <div class="airport-pill">
-              <span class="airport-code">LHR</span>
-              <div class="airport-info">
-                <span class="airport-city">🇬🇧 London</span>
-                <span class="airport-name">London Heathrow</span>
+              <div class="flight-chip" data-flight-region="me" title="Queen Alia International Airport">
+                <span class="flight-chip-iata">AMM</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇯🇴 Amman</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">LGW</span>
-              <div class="airport-info">
-                <span class="airport-city">🇬🇧 London</span>
-                <span class="airport-name">London Gatwick</span>
+              <div class="flight-chip" data-flight-region="me" title="Istanbul Grand Airport">
+                <span class="flight-chip-iata">IST</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇹🇷 Istanbul</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">MAD</span>
-              <div class="airport-info">
-                <span class="airport-city">🇪🇸 Madrid</span>
-                <span class="airport-name">Adolfo Suárez Barajas</span>
+              <!-- Europe -->
+              <div class="flight-chip" data-flight-region="eu" title="London Heathrow Airport">
+                <span class="flight-chip-iata">LHR</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇬🇧 London Heathrow</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">AGP</span>
-              <div class="airport-info">
-                <span class="airport-city">🇪🇸 Málaga</span>
-                <span class="airport-name">Costa del Sol Airport</span>
+              <div class="flight-chip" data-flight-region="eu" title="London Gatwick Airport">
+                <span class="flight-chip-iata">LGW</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇬🇧 London Gatwick</span>
               </div>
-            </div>
 
-            <!-- US West Coast & Southwest -->
-            <div class="airport-pill">
-              <span class="airport-code">SFO</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 San Francisco</span>
-                <span class="airport-name">San Francisco Int'l</span>
+              <div class="flight-chip" data-flight-region="eu" title="Adolfo Suárez Madrid–Barajas Airport">
+                <span class="flight-chip-iata">MAD</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇪🇸 Madrid</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">LAX</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 Los Angeles</span>
-                <span class="airport-name">Los Angeles Int'l</span>
+              <div class="flight-chip" data-flight-region="eu" title="Málaga–Costa del Sol Airport">
+                <span class="flight-chip-iata">AGP</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇪🇸 Málaga</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">SAN</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 San Diego</span>
-                <span class="airport-name">San Diego Int'l</span>
+              <!-- US West -->
+              <div class="flight-chip" data-flight-region="us-west" title="San Francisco International Airport">
+                <span class="flight-chip-iata">SFO</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 San Francisco</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">PDX</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 Portland</span>
-                <span class="airport-name">Portland International</span>
+              <div class="flight-chip" data-flight-region="us-west" title="Los Angeles International Airport">
+                <span class="flight-chip-iata">LAX</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 Los Angeles</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">LAS</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 Las Vegas</span>
-                <span class="airport-name">Harry Reid Int'l</span>
+              <div class="flight-chip" data-flight-region="us-west" title="San Diego International Airport">
+                <span class="flight-chip-iata">SAN</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 San Diego</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">AUS</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 Austin</span>
-                <span class="airport-name">Austin-Bergstrom</span>
+              <div class="flight-chip" data-flight-region="us-west" title="Portland International Airport">
+                <span class="flight-chip-iata">PDX</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 Portland</span>
               </div>
-            </div>
 
-            <!-- US Mountain & Midwest -->
-            <div class="airport-pill">
-              <span class="airport-code">SLC</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 Salt Lake City</span>
-                <span class="airport-name">Salt Lake City Int'l</span>
+              <div class="flight-chip" data-flight-region="us-west" title="Harry Reid International Airport">
+                <span class="flight-chip-iata">LAS</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 Las Vegas</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">ORD</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 Chicago</span>
-                <span class="airport-name">Chicago O'Hare Int'l</span>
+              <!-- US Midwest & East -->
+              <div class="flight-chip" data-flight-region="us-east" title="Salt Lake City International Airport">
+                <span class="flight-chip-iata">SLC</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 Salt Lake City</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">DTW</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 Detroit</span>
-                <span class="airport-name">Detroit Metropolitan</span>
+              <div class="flight-chip" data-flight-region="us-east" title="Chicago O'Hare International Airport">
+                <span class="flight-chip-iata">ORD</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 Chicago</span>
               </div>
-            </div>
 
-            <!-- US East Coast & South -->
-            <div class="airport-pill">
-              <span class="airport-code">MIA</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 Miami</span>
-                <span class="airport-name">Miami International</span>
+              <div class="flight-chip" data-flight-region="us-east" title="Detroit Metropolitan Wayne County Airport">
+                <span class="flight-chip-iata">DTW</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 Detroit</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">IAD</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 Washington D.C.</span>
-                <span class="airport-name">Dulles International</span>
+              <div class="flight-chip" data-flight-region="us-east" title="Austin-Bergstrom International Airport">
+                <span class="flight-chip-iata">AUS</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 Austin</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">BOS</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 Boston</span>
-                <span class="airport-name">Boston Logan Int'l</span>
+              <div class="flight-chip" data-flight-region="us-east" title="Miami International Airport">
+                <span class="flight-chip-iata">MIA</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 Miami</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">PHL</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 Philadelphia</span>
-                <span class="airport-name">Philadelphia Int'l</span>
+              <div class="flight-chip" data-flight-region="us-east" title="Washington Dulles International Airport">
+                <span class="flight-chip-iata">IAD</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 Washington D.C.</span>
               </div>
-            </div>
 
-            <div class="airport-pill">
-              <span class="airport-code">BGM</span>
-              <div class="airport-info">
-                <span class="airport-city">🇺🇸 Binghamton</span>
-                <span class="airport-name">Greater Binghamton</span>
+              <div class="flight-chip" data-flight-region="us-east" title="Boston Logan International Airport">
+                <span class="flight-chip-iata">BOS</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 Boston</span>
               </div>
+
+              <div class="flight-chip" data-flight-region="us-east" title="Philadelphia International Airport">
+                <span class="flight-chip-iata">PHL</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 Philadelphia</span>
+              </div>
+
+              <div class="flight-chip" data-flight-region="us-east" title="Greater Binghamton Airport">
+                <span class="flight-chip-iata">BGM</span>
+                <span class="flight-chip-divider"></span>
+                <span class="flight-chip-city">🇺🇸 Binghamton</span>
+              </div>
+
             </div>
           </div>
         </section>

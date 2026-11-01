@@ -94,6 +94,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 5b. Flight Log Regional Filter
+  const flightFilterBtns = document.querySelectorAll('[data-flight-filter]');
+  const flightChips = document.querySelectorAll('[data-flight-region]');
+
+  flightFilterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetRegion = btn.dataset.flightFilter;
+
+      flightFilterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      flightChips.forEach((chip) => {
+        const chipRegion = chip.dataset.flightRegion;
+        if (targetRegion === 'all' || chipRegion === targetRegion) {
+          chip.classList.remove('hidden');
+        } else {
+          chip.classList.add('hidden');
+        }
+      });
+    });
+  });
+
   // 6. Photo Lightbox Modal (Supports avatar + travel photos)
   const lightbox = document.getElementById('photo-lightbox');
   const lightboxClose = document.getElementById('lightbox-close');

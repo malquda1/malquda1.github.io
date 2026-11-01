@@ -1710,60 +1710,146 @@ img {
   line-height: 1.45;
 }
 
-/* Airport Log */
-.airports-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 14px;
+/* ==========================================================================
+   Flight Terminal Board & Baggage Tag Mosaic
+   ========================================================================== */
+
+.flight-board-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
   margin-top: 16px;
 }
 
-.airport-pill {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 12px 16px;
+.flight-board-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  transition: all 0.2s ease;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 16px;
 }
 
-.airport-pill:hover {
+.flight-board-stats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.flight-stat-pill {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  padding: 5px 12px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.flight-stat-pill.home-base {
+  background: var(--accent-glow);
   border-color: var(--border-accent);
+  color: var(--accent-primary);
+}
+
+.flight-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.flight-filter-btn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.flight-filter-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.flight-filter-btn.active {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #030712;
+  font-weight: 600;
+}
+
+.flight-chips-mosaic {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flight-chip {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 7px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: default;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.flight-chip:hover {
+  border-color: var(--accent-primary);
   background: var(--bg-card-hover);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
 }
 
-.airport-code {
+.flight-chip.home {
+  border-color: var(--border-accent);
+  background: var(--accent-glow);
+}
+
+.flight-chip-iata {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--accent-primary);
   letter-spacing: 0.5px;
-  background: var(--accent-glow);
-  padding: 4px 8px;
-  border-radius: 6px;
-  border: 1px solid var(--border-accent);
 }
 
-.airport-info {
-  display: flex;
-  flex-direction: column;
+.flight-chip-divider {
+  width: 1px;
+  height: 12px;
+  background: var(--border-subtle);
 }
 
-.airport-city {
-  font-size: 13px;
-  font-weight: 600;
+.flight-chip-city {
+  font-size: 12.5px;
+  font-weight: 500;
   color: var(--text-primary);
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
 }
 
-.airport-name {
-  font-size: 11px;
-  color: var(--text-muted);
+.flight-chip.hidden {
+  display: none !important;
 }
 
 /* Hobbies Cards */

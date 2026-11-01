@@ -94,40 +94,72 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Photo Lightbox Modal
-  const avatarWrapper = document.querySelector('.avatar-wrapper.clickable');
+  // 6. Photo Lightbox Modal (Supports avatar + travel photos)
   const lightbox = document.getElementById('photo-lightbox');
   const lightboxClose = document.getElementById('lightbox-close');
   const lightboxBackdrop = document.getElementById('lightbox-backdrop');
+  const lightboxImg = lightbox ? lightbox.querySelector('.lightbox-img') : null;
+  const lightboxTitle = lightbox ? lightbox.querySelector('.lightbox-caption h3') : null;
+  const lightboxDesc = lightbox ? lightbox.querySelector('.lightbox-caption p') : null;
 
-  if (avatarWrapper && lightbox) {
-    const openLightbox = () => {
-      lightbox.classList.add('active');
-      lightbox.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    };
+  const openLightboxWith = (src, alt, title, desc) => {
+    if (!lightbox) return;
+    if (lightboxImg) {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || title;
+    }
+    if (lightboxTitle) lightboxTitle.textContent = title || '';
+    if (lightboxDesc) lightboxDesc.textContent = desc || '';
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
 
-    const closeLightbox = () => {
-      lightbox.classList.remove('active');
-      lightbox.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    };
+  const closeLightbox = () => {
+    if (!lightbox) return;
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
 
-    avatarWrapper.addEventListener('click', openLightbox);
+  const avatarWrapper = document.querySelector('.avatar-wrapper.clickable');
+  if (avatarWrapper) {
+    avatarWrapper.addEventListener('click', () => {
+      openLightboxWith('./assets/images/IMG_4260_jpeg.jpg', 'Mohammad Alqudah, PhD - Portrait', 'Mohammad Alqudah, PhD', 'Principal Applied Scientist at Microsoft · Redmond, WA');
+    });
     avatarWrapper.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        openLightbox();
-      }
-    });
-
-    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-    if (lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightbox);
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-        closeLightbox();
+        openLightboxWith('./assets/images/IMG_4260_jpeg.jpg', 'Mohammad Alqudah, PhD - Portrait', 'Mohammad Alqudah, PhD', 'Principal Applied Scientist at Microsoft · Redmond, WA');
       }
     });
   }
+
+  // Delegated click for travel photo cards
+  document.querySelectorAll('[data-lightbox-src]').forEach((el) => {
+    el.addEventListener('click', () => {
+      const src = el.getAttribute('data-lightbox-src');
+      const title = el.getAttribute('data-lightbox-title');
+      const desc = el.getAttribute('data-lightbox-desc');
+      openLightboxWith(src, title, title, desc);
+    });
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const src = el.getAttribute('data-lightbox-src');
+        const title = el.getAttribute('data-lightbox-title');
+        const desc = el.getAttribute('data-lightbox-desc');
+        openLightboxWith(src, title, title, desc);
+      }
+    });
+  });
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
 });

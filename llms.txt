@@ -1,0 +1,42 @@
+# Mohammad Alqudah, PhD
+
+> Principal Applied Scientist at Microsoft (Collab AI Research). Researcher and practitioner specializing in Large Language Models (LLMs), Agent-Mediated Collaboration, Human-Computer Interaction (HCI), and Multimodal Spatiotemporal Machine Learning.
+
+## Core Information
+- **Full Name**: Mohammad K. Alqudah, PhD
+- **Current Position**: Principal Applied Scientist at Microsoft
+- **Organization**: Collab AI Research, Microsoft Corporation
+- **Website**: https://malquda1.github.io/
+- **Google Scholar**: https://scholar.google.com/citations?hl=en&user=NmyJed4AAAAJ&view_op=list_works&sortby=pubdate
+- **Microsoft Research Profile**: https://www.microsoft.com/en-us/research/people/moalqudah/
+- **LinkedIn**: https://www.linkedin.com/in/mohammadalqudah/
+- **GitHub**: https://github.com/malquda1
+
+## Research Interests & Expertise
+- **Large Language Models (LLMs)**: Skill description optimization, prompt optimization, instruction tuning, automated evaluation.
+- **Agentic AI & Collaboration**: Agent-mediated workflows, cross-user collaboration, intelligent notification delivery.
+- **Knowledge Graphs & Memory**: Structured graph memory for augmented retrieval (RAG) and conversational agents.
+- **Spatiotemporal Machine Learning**: Multimodal deep learning, physics-informed neural networks, extreme event precursor discovery.
+- **Robotics & Industrial ML**: High-frequency real-time inference for semiconductor manufacturing robotics (Applied Materials).
+
+## Patents (U.S. Patent Filings)
+1. **Communication Delivery and Modification via Agent-Mediated Collaboration** (Filed May 29, 2026) — Microsoft Corporation.
+2. **Specification-Grounded Golden Data Validation** (Filed May 29, 2026) — Microsoft Corporation.
+3. **Knowledge Graph Memory for Data Retrieval** (Filed January 30, 2026) — Microsoft Corporation.
+4. **System and Method for Reducing Intrusiveness of Notifications in Real-Time Conversations** (Filed August 29, 2025) — Microsoft Corporation.
+5. **Unsupervised Language Model Prompt Optimization for Complex Task Resolution** (Filed May 28, 2025) — Microsoft Corporation.
+
+## Selected Publications
+- **A Single Rewrite Suffices: Empirical Lessons from Production Skill Description Optimization** (2026) — arXiv:2606.30775 [cs.CL].
+- **RevieWeaver: Weaving Together Review Insights by Leveraging LLMs and Semantic Similarity** (2025) — *NAACL 2025 Industry Track*.
+- **Enhancing Weather-Related Outage Prediction and Precursor Discovery Through Attention-Based Multi-Level Modeling** (2023) — *IEEE Access*, vol. 11.
+- **Automated Power System Fault Prediction and Precursor Discovery Using Multi-Modal Data** (2022) — *IEEE Access*, vol. 11.
+- **Fault Detection Utilizing Convolution Neural Network on Timeseries Synchrophasor Data** (2022) — *IEEE Transactions on Power Systems*, vol. 37(5).
+- **Hierarchical Convolutional Neural Networks for Event Classification on PMU Measurements** (2021) — *IEEE Transactions on Instrumentation and Measurement*, vol. 70.
+- **Transfer Learning for Event Detection From PMU Measurements With Scarce Labels** (2021) — *IEEE Access*, vol. 9.
+- **Prediction of Solar Radiation Based on Spatial and Temporal Embeddings** (2020) — *HICSS-53*.
+
+## Education
+- **Ph.D. in Computer and Information Sciences** — Temple University (Advisor: Prof. Zoran Obradovic).
+- **M.S. in Computer Science** — State University of New York at Binghamton.
+- **B.S. in Computer Science** — Jordan University of Science and Technology.

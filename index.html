@@ -14,16 +14,20 @@
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Mohammad Alqudah, PhD — Principal Applied Scientist">
-  <meta property="og:description" content="Principal Applied Scientist at Microsoft (Collab AI Research). Research and applied AI across LLMs, Human-Computer Interaction, and Multimodal Machine Learning.">
+  <meta property="og:site_name" content="Mohammad Alqudah, PhD">
+  <meta property="og:title" content="Mohammad Alqudah, PhD — Principal Applied Scientist at Microsoft">
+  <meta property="og:description" content="Principal Applied Scientist at Microsoft (Collab AI Research). Research & production AI across LLMs, Agentic Systems, HCI, and Spatiotemporal Machine Learning.">
   <meta property="og:url" content="https://malquda1.github.io/">
-  <meta property="og:image" content="https://malquda1.github.io/assets/images/IMG_4260_jpeg.jpg">
+  <meta property="og:image" content="https://malquda1.github.io/assets/images/og-share-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mohammad Alqudah, PhD — Principal Applied Scientist at Microsoft">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Mohammad Alqudah, PhD — Principal Applied Scientist">
-  <meta name="twitter:description" content="Principal Applied Scientist at Microsoft (Collab AI Research). AI, LLMs, HCI, and Machine Learning.">
-  <meta name="twitter:image" content="https://malquda1.github.io/assets/images/IMG_4260_jpeg.jpg">
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohammad Alqudah, PhD — Principal Applied Scientist at Microsoft">
+  <meta name="twitter:description" content="Principal Applied Scientist at Microsoft (Collab AI Research). AI, LLMs, Agentic Systems, and Machine Learning.">
+  <meta name="twitter:image" content="https://malquda1.github.io/assets/images/og-share-card.png">
 
   <!-- Favicon & App Icons (Optimized for Google Search & Browsers) -->
   <link rel="icon" type="image/x-icon" href="./favicon.ico?v=3">
@@ -34,41 +38,90 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png?v=3">
   <link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg?v=3">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png?v=3">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta name="theme-color" content="#0e172a">
 
-  <!-- Google Structured Data (JSON-LD) for Person & Scholarly Profile -->
+  <!-- Machine-Readable AI & LLM Discovery (llms.txt standard) -->
+  <link rel="alternate" type="text/plain" href="https://malquda1.github.io/llms.txt" title="LLMs Context">
+
+  <!-- Google Scholar Citation Metadata for Flagship Papers -->
+  <meta name="citation_title" content="A Single Rewrite Suffices: Empirical Lessons from Production Skill Description Optimization">
+  <meta name="citation_author" content="Zhou, Yangqiaoyu">
+  <meta name="citation_author" content="Alqudah, Mohammad">
+  <meta name="citation_author" content="Lai, Kwei-Herng">
+  <meta name="citation_publication_date" content="2026/06">
+  <meta name="citation_arxiv_id" content="2606.30775">
+
+  <!-- Comprehensive Google Structured Data (JSON-LD Schema Graph) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Mohammad Alqudah",
-    "alternateName": "Mohammad K. Alqudah",
-    "honorificSuffix": "PhD",
-    "jobTitle": "Principal Applied Scientist",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Microsoft"
-    },
-    "alumniOf": [
+    "@graph": [
       {
-        "@type": "CollegeOrUniversity",
-        "name": "Temple University"
+        "@type": "Person",
+        "@id": "https://malquda1.github.io/#person",
+        "name": "Mohammad Alqudah",
+        "alternateName": ["Mohammad K. Alqudah", "Mo Alqudah"],
+        "honorificSuffix": "PhD",
+        "jobTitle": "Principal Applied Scientist",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Microsoft",
+          "url": "https://www.microsoft.com/"
+        },
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Temple University"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Binghamton University"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Jordan University of Science and Technology"
+          }
+        ],
+        "knowsAbout": [
+          "Large Language Models (LLMs)",
+          "Prompt Optimization",
+          "Agent-Mediated Collaboration",
+          "Knowledge Graph Memory",
+          "Human-Computer Interaction",
+          "Spatiotemporal Machine Learning",
+          "Semiconductor Robotics"
+        ],
+        "url": "https://malquda1.github.io/",
+        "image": "https://malquda1.github.io/assets/images/IMG_4260_jpeg.jpg",
+        "sameAs": [
+          "https://www.linkedin.com/in/mohammadalqudah/",
+          "https://scholar.google.com/citations?hl=en&user=NmyJed4AAAAJ&view_op=list_works&sortby=pubdate",
+          "https://www.microsoft.com/en-us/research/people/moalqudah/",
+          "https://github.com/malquda1",
+          "https://arxiv.org/abs/2606.30775"
+        ]
       },
       {
-        "@type": "CollegeOrUniversity",
-        "name": "Binghamton University"
+        "@type": "WebSite",
+        "@id": "https://malquda1.github.io/#website",
+        "url": "https://malquda1.github.io/",
+        "name": "Mohammad Alqudah, PhD",
+        "description": "Personal scholarly and professional portfolio of Dr. Mohammad Alqudah, Principal Applied Scientist at Microsoft.",
+        "author": {
+          "@id": "https://malquda1.github.io/#person"
+        }
       },
       {
-        "@type": "CollegeOrUniversity",
-        "name": "Jordan University of Science and Technology"
+        "@type": "ProfilePage",
+        "@id": "https://malquda1.github.io/#profile",
+        "url": "https://malquda1.github.io/",
+        "name": "Mohammad Alqudah — Profile",
+        "dateModified": "2026-11-01",
+        "mainEntity": {
+          "@id": "https://malquda1.github.io/#person"
+        }
       }
-    ],
-    "url": "https://malquda1.github.io/",
-    "image": "https://malquda1.github.io/assets/images/IMG_4260_jpeg.jpg",
-    "sameAs": [
-      "https://www.linkedin.com/in/mohammadalqudah/",
-      "https://scholar.google.com/citations?hl=en&user=NmyJed4AAAAJ&view_op=list_works&sortby=pubdate",
-      "https://www.microsoft.com/en-us/research/people/moalqudah/",
-      "https://github.com/malquda1"
     ]
   }
   </script>

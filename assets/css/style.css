@@ -1932,3 +1932,182 @@ img {
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
 }
+
+/* ==========================================================================
+   Academic Lineage Page
+   ========================================================================== */
+
+.lineage-source-note {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.lineage-source-note a {
+  color: var(--accent-secondary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.lineage-source-note a:hover {
+  text-decoration: underline;
+}
+
+.lineage-tree {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 28px;
+}
+
+.lineage-tree::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 14px;
+  bottom: 14px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--border-subtle),
+    var(--accent-primary) 50%,
+    var(--accent-emerald)
+  );
+  border-radius: 2px;
+}
+
+.lineage-era-label {
+  position: relative;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-secondary);
+}
+
+.lineage-era-label:first-child {
+  margin-top: 0;
+}
+
+.lineage-node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lineage-node:hover {
+  transform: translateX(4px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-card);
+}
+
+.lineage-node::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--bg-base);
+  border: 2px solid var(--accent-primary);
+}
+
+.lineage-node.is-milestone {
+  border-color: var(--border-accent);
+  background: var(--bg-card-hover);
+}
+
+.lineage-node.is-milestone::before {
+  background: var(--accent-primary);
+  box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+.lineage-node.is-self {
+  border-color: var(--accent-emerald);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), var(--bg-card-hover));
+  box-shadow: var(--shadow-hover);
+}
+
+.lineage-node.is-self::before {
+  width: 12px;
+  height: 12px;
+  left: -25px;
+  background: var(--accent-emerald);
+  border-color: var(--accent-emerald);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+}
+
+.lineage-node-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.lineage-gen {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  padding: 3px 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.lineage-node.is-self .lineage-gen {
+  color: var(--accent-emerald);
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.lineage-names {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.lineage-names a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border-hover);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.lineage-names a:hover {
+  color: var(--accent-secondary);
+  border-bottom-color: var(--accent-secondary);
+}
+
+.lineage-meta {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .lineage-node {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .lineage-meta {
+    text-align: left;
+  }
+}

@@ -1853,12 +1853,39 @@
         </section>
 
         <section class="section-block">
-          <div class="section-header">
-            <h3 class="section-title">Advisor–Ph.D. Student Genealogy Path</h3>
-            <p class="section-subtitle">Click any scholar to explore their biography</p>
+          <div class="section-header lineage-header-row">
+            <div>
+              <h3 class="section-title">Advisor–Ph.D. Student Genealogy Path</h3>
+              <p class="section-subtitle">Click any node in the tree to inspect their biography &amp; Wikipedia page</p>
+            </div>
+            <div class="lineage-view-toggle" role="tablist" aria-label="Lineage display mode">
+              <button class="lineage-toggle-btn active" data-lineage-view="graph" type="button">
+                <ion-icon name="git-network-outline"></ion-icon>
+                <span>Tree Graph</span>
+              </button>
+              <button class="lineage-toggle-btn" data-lineage-view="list" type="button">
+                <ion-icon name="list-outline"></ion-icon>
+                <span>All 27 Cards</span>
+              </button>
+            </div>
           </div>
 
-          <div class="lineage-tree">
+          <!-- Interactive SVG Tree Graph (Default) -->
+          <div class="lineage-viz-shell" id="lineage-viz-shell">
+            <div class="lineage-inspector" id="lineage-inspector" aria-live="polite"></div>
+            <div class="lineage-svg-wrap">
+              <svg class="lineage-svg" id="lineage-svg" viewBox="0 0 1000 715" role="img" aria-label="Interactive 27-generation academic lineage tree from 1474 to 2023"></svg>
+              <div class="lineage-svg-legend">
+                <span class="lineage-legend-item"><span class="lineage-legend-dot" style="background:#6366f1"></span>Renaissance (1474–1655)</span>
+                <span class="lineage-legend-item"><span class="lineage-legend-dot" style="background:#38bdf8"></span>Calculus &amp; Physics (1666–1885)</span>
+                <span class="lineage-legend-item"><span class="lineage-legend-dot" style="background:#a855f7"></span>Logic &amp; CS (1903–1984)</span>
+                <span class="lineage-legend-item"><span class="lineage-legend-dot" style="background:#10b981"></span>ML &amp; Data Science (1991–2023)</span>
+                <span class="lineage-legend-item">Dashed branch = Co-advisor</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lineage-tree hidden">
             <div class="lineage-era-label">Renaissance &amp; Early Modern Scholarship (1474 – 1655)</div>
 
             <div class="lineage-node">

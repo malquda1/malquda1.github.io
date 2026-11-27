@@ -240,7 +240,29 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    let activeIdx = nodes.length - 1; // Default to GEN 27 (Mohammad Alqudah)
+    let activeIdx = 0; // Start at GEN 01 and walk forward 1474 -> 2023
+    let isPlaying = true;
+    let autoplayTimer = null;
+
+    const stopAutoplay = () => {
+      isPlaying = false;
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    };
+
+    const startAutoplay = () => {
+      stopAutoplay();
+      isPlaying = true;
+      autoplayTimer = setInterval(() => {
+        const lineagePage = document.querySelector('[data-page="lineage"]');
+        if (document.hidden || !lineagePage || !lineagePage.classList.contains('active')) return;
+        activeIdx = (activeIdx + 1) % nodes.length;
+        drawSvg();
+        renderInspector(activeIdx);
+      }, 3500);
+    };
 
     const renderInspector = (idx) => {
       const n = nodes[idx];
@@ -260,6 +282,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="lineage-meta">· ${n.meta}</span>
               </div>
               <div class="lineage-inspector-nav">
+                <button class="lineage-step-btn ${isPlaying ? 'is-playing' : ''}" id="lineage-play-toggle" aria-label="${isPlaying ? 'Pause auto-advance' : 'Play auto-advance'}" title="${isPlaying ? 'Pause tour' : 'Auto-advance tour'}">
+                  <ion-icon name="${isPlaying ? 'pause-outline' : 'play-outline'}"></ion-icon>
+                </button>
                 <button class="lineage-step-btn" id="lineage-prev" aria-label="Previous generation" ${idx === 0 ? 'disabled' : ''}>
                   <ion-icon name="chevron-back-outline"></ion-icon>
                 </button>
@@ -274,8 +299,22 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
 
-      document.getElementById('lineage-prev')?.addEventListener('click', () => selectNode(idx - 1));
-      document.getElementById('lineage-next')?.addEventListener('click', () => selectNode(idx + 1));
+      document.getElementById('lineage-play-toggle')?.addEventListener('click', () => {
+        if (isPlaying) {
+          stopAutoplay();
+        } else {
+          startAutoplay();
+        }
+        renderInspector(activeIdx);
+      });
+      document.getElementById('lineage-prev')?.addEventListener('click', () => {
+        stopAutoplay();
+        selectNode(idx - 1);
+      });
+      document.getElementById('lineage-next')?.addEventListener('click', () => {
+        stopAutoplay();
+        selectNode(idx + 1);
+      });
     };
 
     const svgNS = 'http://www.w3.org/2000/svg';
@@ -423,10 +462,14 @@ document.addEventListener('DOMContentLoaded', () => {
         g.appendChild(label);
         g.appendChild(year);
 
-        g.addEventListener('click', () => selectNode(i));
+        g.addEventListener('click', () => {
+          stopAutoplay();
+          selectNode(i);
+        });
         g.addEventListener('keydown', (e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
+            stopAutoplay();
             selectNode(i);
           }
         });
@@ -444,6 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     drawSvg();
     renderInspector(activeIdx);
+    startAutoplay();
 
     // Toggle between Graph View and List View
     lineageToggleBtns.forEach((btn) => {

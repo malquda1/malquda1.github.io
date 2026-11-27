@@ -2282,6 +2282,11 @@ img {
   color: var(--accent-secondary);
 }
 
+.lineage-step-btn.is-playing {
+  border-color: var(--accent-emerald);
+  color: var(--accent-emerald);
+}
+
 .lineage-step-btn:disabled {
   opacity: 0.35;
   cursor: not-allowed;

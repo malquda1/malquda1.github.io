@@ -203,13 +203,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const isMilestone = el.classList.contains('is-milestone');
       const isSelf = el.classList.contains('is-self');
       const hasCoAdvisor = names.includes('&');
+      const portrait = el.dataset.portrait || '';
       // Short label for SVG node
       const primary = names.split('&')[0].trim();
       const parts = primary.replace(/,\s*Jr\.?/i, '').split(' ');
       const shortName = parts.length > 2 ? `${parts[0][0]}. ${parts[parts.length - 1]}` : primary;
+      const initials = parts.length >= 2 ? `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase() : primary.slice(0, 2).toUpperCase();
       const yearMatch = meta.match(/\d{4}/);
       const shortYear = yearMatch ? yearMatch[0] : (meta.includes('16th') ? '~1550' : meta.includes('19th') ? '~1810' : '—');
-      return { idx, gen, names, shortName, meta, shortYear, note, linksHtml, isMilestone, isSelf, hasCoAdvisor };
+      return { idx, gen, names, shortName, initials, portrait, meta, shortYear, note, linksHtml, isMilestone, isSelf, hasCoAdvisor };
     });
 
     // Era colors matching CSS tokens
@@ -243,24 +245,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderInspector = (idx) => {
       const n = nodes[idx];
       if (!n) return;
+      const portraitHtml = n.portrait
+        ? `<img class="lineage-portrait-img" src="${n.portrait}" alt="${n.names}" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="lineage-portrait-fallback" style="display:none">${n.initials}</span>`
+        : `<span class="lineage-portrait-fallback">${n.initials}</span>`;
+
       lineageInspector.innerHTML = `
-        <div class="lineage-inspector-top">
-          <div class="lineage-node-main">
-            <span class="lineage-gen">${n.gen}</span>
-            <span class="lineage-names">${n.names}</span>
-            <span class="lineage-meta">· ${n.meta}</span>
-          </div>
-          <div class="lineage-inspector-nav">
-            <button class="lineage-step-btn" id="lineage-prev" aria-label="Previous generation" ${idx === 0 ? 'disabled' : ''}>
-              <ion-icon name="chevron-back-outline"></ion-icon>
-            </button>
-            <button class="lineage-step-btn" id="lineage-next" aria-label="Next generation" ${idx === nodes.length - 1 ? 'disabled' : ''}>
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-            </button>
+        <div class="lineage-inspector-body">
+          <div class="lineage-portrait-wrap">${portraitHtml}</div>
+          <div class="lineage-inspector-content">
+            <div class="lineage-inspector-top">
+              <div class="lineage-node-main">
+                <span class="lineage-gen">${n.gen}</span>
+                <span class="lineage-names">${n.names}</span>
+                <span class="lineage-meta">· ${n.meta}</span>
+              </div>
+              <div class="lineage-inspector-nav">
+                <button class="lineage-step-btn" id="lineage-prev" aria-label="Previous generation" ${idx === 0 ? 'disabled' : ''}>
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+                </button>
+                <button class="lineage-step-btn" id="lineage-next" aria-label="Next generation" ${idx === nodes.length - 1 ? 'disabled' : ''}>
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+            ${n.note ? `<p class="lineage-note">${n.note}</p>` : ''}
+            ${n.linksHtml ? `<div class="lineage-links">${n.linksHtml}</div>` : ''}
           </div>
         </div>
-        ${n.note ? `<p class="lineage-note">${n.note}</p>` : ''}
-        ${n.linksHtml ? `<div class="lineage-links">${n.linksHtml}</div>` : ''}
       `;
 
       document.getElementById('lineage-prev')?.addEventListener('click', () => selectNode(idx - 1));
@@ -276,6 +287,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const drawSvg = () => {
       lineageSvg.innerHTML = '';
+
+      // 0. ClipPaths for circular portraits inside SVG nodes
+      const defs = makeEl('defs');
+      nodes.forEach((n, i) => {
+        const { x, y } = coords[i];
+        const r = n.isSelf ? 16 : (n.isMilestone ? 14 : 11);
+        const cp = makeEl('clipPath', { id: `lineage-clip-${i}` });
+        cp.appendChild(makeEl('circle', { cx: x, cy: y, r: String(r) }));
+        defs.appendChild(cp);
+      });
+      lineageSvg.appendChild(defs);
 
       // 1. Draw connecting path segments between consecutive generations
       for (let i = 0; i < nodes.length - 1; i++) {
@@ -301,10 +323,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }));
       }
 
-      // 2. Draw co-advisor merge branches & nodes
+      // 2. Draw co-advisor merge branches & portrait nodes
       nodes.forEach((n, i) => {
         const { x, y } = coords[i];
         const color = getEraColor(i);
+        const r = n.isSelf ? 16 : (n.isMilestone ? 14 : 11);
 
         if (n.hasCoAdvisor) {
           const bx = x - 22;
@@ -333,31 +356,58 @@ document.addEventListener('DOMContentLoaded', () => {
           'aria-label': `${n.gen}: ${n.names}`
         });
 
-        const ring = makeEl('circle', {
-          class: 'node-ring',
-          cx: x,
-          cy: y,
-          r: i === activeIdx ? '16' : (n.isMilestone || n.isSelf ? '11' : '8'),
-          fill: i === activeIdx ? color : 'none',
-          'fill-opacity': i === activeIdx ? '0.18' : '0',
-          stroke: color,
-          'stroke-width': i === activeIdx ? '2' : '0'
-        });
+        if (i === activeIdx) {
+          g.appendChild(makeEl('circle', {
+            class: 'node-ring',
+            cx: x,
+            cy: y,
+            r: String(r + 6),
+            fill: color,
+            'fill-opacity': '0.18',
+            stroke: color,
+            'stroke-width': '2'
+          }));
+        }
 
-        const core = makeEl('circle', {
+        g.appendChild(makeEl('circle', {
           class: 'node-core',
           cx: x,
           cy: y,
-          r: n.isSelf ? '9' : (n.isMilestone ? '7.5' : '5.5'),
-          fill: (n.isMilestone || n.isSelf || i === activeIdx) ? color : 'var(--bg-base)',
+          r: String(r + 2),
+          fill: 'var(--bg-base)',
           stroke: color,
-          'stroke-width': '2.5'
-        });
+          'stroke-width': i === activeIdx ? '3' : '2.2'
+        }));
+
+        if (n.portrait) {
+          const img = makeEl('image', {
+            href: n.portrait,
+            x: String(x - r),
+            y: String(y - r),
+            width: String(r * 2),
+            height: String(r * 2),
+            preserveAspectRatio: 'xMidYMin slice',
+            'clip-path': `url(#lineage-clip-${i})`
+          });
+          g.appendChild(img);
+        } else {
+          const initTxt = makeEl('text', {
+            x: x,
+            y: y + 3.5,
+            'text-anchor': 'middle',
+            'font-size': '9',
+            'font-weight': '700',
+            'font-family': 'JetBrains Mono, monospace',
+            fill: color
+          });
+          initTxt.textContent = n.initials;
+          g.appendChild(initTxt);
+        }
 
         const label = makeEl('text', {
           class: 'lineage-svg-label',
           x: x,
-          y: y + 24,
+          y: y + r + 16,
           'text-anchor': 'middle'
         });
         label.textContent = n.shortName;
@@ -365,13 +415,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const year = makeEl('text', {
           class: 'lineage-svg-year',
           x: x,
-          y: y + 38,
+          y: y + r + 29,
           'text-anchor': 'middle'
         });
         year.textContent = n.shortYear;
 
-        g.appendChild(ring);
-        g.appendChild(core);
         g.appendChild(label);
         g.appendChild(year);
 

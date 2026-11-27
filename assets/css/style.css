@@ -2197,8 +2197,56 @@ img {
   padding: 20px 24px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   box-shadow: var(--shadow-card);
+}
+
+.lineage-inspector-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.lineage-portrait-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid var(--border-accent);
+  background: var(--bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lineage-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.lineage-portrait-fallback {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-secondary);
+}
+
+.lineage-inspector-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 540px) {
+  .lineage-inspector-body {
+    flex-direction: column;
+  }
 }
 
 .lineage-inspector-top {
